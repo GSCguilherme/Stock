@@ -1,0 +1,11 @@
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\Biblioteca\bin\Debug\Biblioteca.dll
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\Biblioteca\obj\Debug\Biblioteca.dll
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\Biblioteca\obj\Debug\Biblioteca.pdb
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\Biblioteca\bin\Debug\MySql.Data.dll
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Desktop\Stock\Biblioteca\bin\Debug\Biblioteca.dll
+C:\Users\aluno\Desktop\Stock\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\Users\aluno\Desktop\Stock\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Desktop\Stock\Biblioteca\obj\Debug\Biblioteca.dll
+C:\Users\aluno\Desktop\Stock\Biblioteca\obj\Debug\Biblioteca.pdb

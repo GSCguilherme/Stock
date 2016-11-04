@@ -1,0 +1,23 @@
+c:\users\daniel\documents\visual studio 2015\Projects\Stock\ProjetoStock\bin\Debug\ProjetoStock.exe.config
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\ProjetoStock\bin\Debug\ProjetoStock.exe
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\ProjetoStock\bin\Debug\ProjetoStock.pdb
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\ProjetoStock\bin\Debug\Biblioteca.dll
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\ProjetoStock\bin\Debug\MySql.Data.dll
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\ProjetoStock\bin\Debug\Biblioteca.pdb
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\ProjetoStock\obj\Debug\ProjetoStock.csprojResolveAssemblyReference.cache
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\ProjetoStock\obj\Debug\ProjetoStock.Properties.Resources.resources
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\ProjetoStock\obj\Debug\ProjetoStock.csproj.GenerateResource.Cache
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\ProjetoStock\obj\Debug\ProjetoStock.exe
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\ProjetoStock\obj\Debug\ProjetoStock.pdb
+C:\Users\daniel\Documents\Visual Studio 2015\Projects\Stock\ProjetoStock\obj\Debug\ProjetoStock.FormCadastro.resources
+C:\Users\aluno\Desktop\Stock\ProjetoStock\bin\Debug\ProjetoStock.exe.config
+C:\Users\aluno\Desktop\Stock\ProjetoStock\obj\Debug\ProjetoStock.exe
+C:\Users\aluno\Desktop\Stock\ProjetoStock\obj\Debug\ProjetoStock.pdb
+C:\Users\aluno\Desktop\Stock\ProjetoStock\bin\Debug\ProjetoStock.exe
+C:\Users\aluno\Desktop\Stock\ProjetoStock\bin\Debug\ProjetoStock.pdb
+C:\Users\aluno\Desktop\Stock\ProjetoStock\bin\Debug\Biblioteca.dll
+C:\Users\aluno\Desktop\Stock\ProjetoStock\bin\Debug\Biblioteca.pdb
+C:\Users\aluno\Desktop\Stock\ProjetoStock\obj\Debug\ProjetoStock.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Desktop\Stock\ProjetoStock\obj\Debug\ProjetoStock.FormCadastro.resources
+C:\Users\aluno\Desktop\Stock\ProjetoStock\obj\Debug\ProjetoStock.Properties.Resources.resources
+C:\Users\aluno\Desktop\Stock\ProjetoStock\obj\Debug\ProjetoStock.csproj.GenerateResource.Cache
