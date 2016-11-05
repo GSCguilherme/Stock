@@ -31,24 +31,24 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.panelGerente = new System.Windows.Forms.Panel();
+            this.txtNickName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCep = new System.Windows.Forms.MaskedTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbIdade = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtSenha_g = new System.Windows.Forms.TextBox();
-            this.txtNome_g = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbEscolha = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt = new System.Windows.Forms.TextBox();
             this.panelGerente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,28 +75,45 @@
             // panelGerente
             // 
             this.panelGerente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelGerente.Controls.Add(this.txt);
+            this.panelGerente.Controls.Add(this.txtNickName);
             this.panelGerente.Controls.Add(this.label5);
             this.panelGerente.Controls.Add(this.label4);
             this.panelGerente.Controls.Add(this.txtCep);
-            this.panelGerente.Controls.Add(this.textBox2);
+            this.panelGerente.Controls.Add(this.txtEmail);
             this.panelGerente.Controls.Add(this.label3);
-            this.panelGerente.Controls.Add(this.comboBox1);
+            this.panelGerente.Controls.Add(this.cbIdade);
             this.panelGerente.Controls.Add(this.label2);
-            this.panelGerente.Controls.Add(this.textBox1);
+            this.panelGerente.Controls.Add(this.txtEndereco);
             this.panelGerente.Controls.Add(this.label1);
             this.panelGerente.Controls.Add(this.txtCpf);
             this.panelGerente.Controls.Add(this.label6);
             this.panelGerente.Controls.Add(this.label7);
             this.panelGerente.Controls.Add(this.label8);
-            this.panelGerente.Controls.Add(this.txtSenha_g);
-            this.panelGerente.Controls.Add(this.txtNome_g);
+            this.panelGerente.Controls.Add(this.txtSenha);
+            this.panelGerente.Controls.Add(this.txtNome);
             this.panelGerente.Enabled = false;
             this.panelGerente.Location = new System.Drawing.Point(139, 54);
             this.panelGerente.Name = "panelGerente";
             this.panelGerente.Size = new System.Drawing.Size(409, 245);
             this.panelGerente.TabIndex = 13;
             this.panelGerente.Visible = false;
+            // 
+            // txtNickName
+            // 
+            this.txtNickName.Location = new System.Drawing.Point(72, 115);
+            this.txtNickName.Name = "txtNickName";
+            this.txtNickName.PasswordChar = '#';
+            this.txtNickName.Size = new System.Drawing.Size(135, 20);
+            this.txtNickName.TabIndex = 31;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 122);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "NickName:";
             // 
             // label4
             // 
@@ -116,12 +133,12 @@
             this.txtCep.TabIndex = 28;
             this.txtCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // textBox2
+            // txtEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(72, 79);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 20);
-            this.textBox2.TabIndex = 27;
+            this.txtEmail.Location = new System.Drawing.Point(72, 79);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(213, 20);
+            this.txtEmail.TabIndex = 27;
             // 
             // label3
             // 
@@ -132,17 +149,17 @@
             this.label3.TabIndex = 26;
             this.label3.Text = "Email:";
             // 
-            // comboBox1
+            // cbIdade
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbIdade.FormattingEnabled = true;
+            this.cbIdade.Items.AddRange(new object[] {
             "Gerente",
             "Funcionário",
             "Fornecedor"});
-            this.comboBox1.Location = new System.Drawing.Point(334, 44);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(47, 21);
-            this.comboBox1.TabIndex = 25;
+            this.cbIdade.Location = new System.Drawing.Point(334, 44);
+            this.cbIdade.Name = "cbIdade";
+            this.cbIdade.Size = new System.Drawing.Size(47, 21);
+            this.cbIdade.TabIndex = 25;
             // 
             // label2
             // 
@@ -153,12 +170,12 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "Idade:";
             // 
-            // textBox1
+            // txtEndereco
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 162);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(322, 20);
-            this.textBox1.TabIndex = 23;
+            this.txtEndereco.Location = new System.Drawing.Point(72, 162);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(322, 20);
+            this.txtEndereco.TabIndex = 23;
             // 
             // label1
             // 
@@ -205,20 +222,20 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Senha:";
             // 
-            // txtSenha_g
+            // txtSenha
             // 
-            this.txtSenha_g.Location = new System.Drawing.Point(288, 115);
-            this.txtSenha_g.Name = "txtSenha_g";
-            this.txtSenha_g.PasswordChar = '#';
-            this.txtSenha_g.Size = new System.Drawing.Size(100, 20);
-            this.txtSenha_g.TabIndex = 18;
+            this.txtSenha.Location = new System.Drawing.Point(288, 115);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '#';
+            this.txtSenha.Size = new System.Drawing.Size(100, 20);
+            this.txtSenha.TabIndex = 18;
             // 
-            // txtNome_g
+            // txtNome
             // 
-            this.txtNome_g.Location = new System.Drawing.Point(72, 44);
-            this.txtNome_g.Name = "txtNome_g";
-            this.txtNome_g.Size = new System.Drawing.Size(213, 20);
-            this.txtNome_g.TabIndex = 17;
+            this.txtNome.Location = new System.Drawing.Point(72, 44);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(213, 20);
+            this.txtNome.TabIndex = 17;
             // 
             // label11
             // 
@@ -242,23 +259,6 @@
             this.cbEscolha.Size = new System.Drawing.Size(107, 21);
             this.cbEscolha.TabIndex = 15;
             this.cbEscolha.SelectedIndexChanged += new System.EventHandler(this.cbEscolha_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 122);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "NickName:";
-            // 
-            // txt
-            // 
-            this.txt.Location = new System.Drawing.Point(72, 115);
-            this.txt.Name = "txt";
-            this.txt.PasswordChar = '#';
-            this.txt.Size = new System.Drawing.Size(135, 20);
-            this.txt.TabIndex = 31;
             // 
             // FormCadastro
             // 
@@ -290,19 +290,19 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSenha_g;
-        private System.Windows.Forms.TextBox txtNome_g;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cbEscolha;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox txtCep;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbIdade;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt;
+        private System.Windows.Forms.TextBox txtNickName;
         private System.Windows.Forms.Label label5;
     }
 }

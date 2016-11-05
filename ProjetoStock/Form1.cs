@@ -11,6 +11,7 @@ namespace ProjetoStock
     {
         Fachada fa = new Fachada();
         Gerente bgeren = new Gerente();
+        Funcionario bfun = new Funcionario();
         NGerente ngeren = new NGerente();
         public FormCadastro()
         {
@@ -43,33 +44,44 @@ namespace ProjetoStock
         {
             try
             {
-                //bgeren.Cpf_g = txtCpf_g.Text;
-                //bgeren.Nome_g = txtNome_g.Text;
-                //bgeren.Senha_g = txtSenha_g.Text;
-               
-                if (ngeren.ValidaCPF(bgeren.Cpf_g) == true )
+                string escolha = cbEscolha.Text;
+                if (escolha.Equals("Gerente") == true)
                 {
-                    fa.inserirGerente(bgeren);
-                    MessageBox.Show("Gerente Cadastrado com Sucesso!");
-                } else
+                    bgeren.Cpf = txtCpf.Text;
+                    bgeren.Nome = txtNome.Text;
+                    bgeren.Email = txtEmail.Text;
+                    bgeren.Endereco = txtEndereco.Text;
+                    bgeren.Idade = cbIdade.Text;
+                    bgeren.Nickname = txtNickName.Text;
+                    bgeren.Senha_g = txtSenha.Text;
+                    bgeren.Cep = txtCep.Text;
+                    if (ngeren.ValidaCPF(bgeren.Cpf) == true)
+                    {
+                        fa.inserirGerente(bgeren);
+                        MessageBox.Show("Gerente Cadastrado com sucesso!");
+                    }
+                } else if(escolha.Equals("Funcionario") == true)
                 {
-                    MessageBox.Show("Por favor insira um Cpf válido");
+                    bfun.Cpf = txtCpf.Text;
+                    bfun.Nome = txtNome.Text;
+                    bfun.Email = txtEmail.Text;
+                    bfun.Endereco = txtEndereco.Text;
+                    bfun.Idade = cbIdade.Text;
+                    bfun.Nickname = txtNickName.Text;
+                    bfun.Senha = txtSenha.Text;
+                    bfun.Cep = txtCep.Text;
+                    fa.inserirFuncionario(bfun);
                 }
+
             }
-            catch (Exception ed)
+            catch (Exception ex)
             {
-                MessageBox.Show("Erro ao Inserir gerente no Banco de Dados! " + ed);
+                MessageBox.Show("Erro ao Cadastrar! " + ex);
             }
         }
-
         private void cbEscolha_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string escolha = cbEscolha.Text;
-            if (escolha.Equals("Gerente") == true)
-            {
-                bgeren.Cpf = txtCpf.Text;
-                bgeren.Nome = txtNome_g.Text;
-            }
+            
         }
     }
 }
