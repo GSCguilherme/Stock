@@ -8,6 +8,7 @@ namespace Biblioteca
    public class Fachada : IGerente, IFuncionario, IFornecedor
     {
         NGerente ngeren = new NGerente();
+        NFuncionario nfun = new NFuncionario();
 
         #region FORNECEDOR
         public void inserirFornecedor(Fornecedor bforn)
@@ -34,7 +35,7 @@ namespace Biblioteca
         #region FUNCIONARIO
         public void inserirFuncionario(Funcionario bfun)
         {
-            throw new NotImplementedException();
+            nfun.inserirFuncionario(bfun);
         }
 
         public void alterarFuncionario(Funcionario bfun)

@@ -76,7 +76,7 @@ namespace Biblioteca.controle.negocios
 
         public void inserirGerente(Gerente bgeren)
         {
-            if (ValidaCPF(bgeren.Cpf_g) == true)
+            if (ValidaCPF(bgeren.Cpf) == true)
             {
                 dgeren.inserirGerente(bgeren); 
             }

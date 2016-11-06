@@ -9,3 +9,9 @@ C:\Users\aluno\Desktop\Stock\Biblioteca\bin\Debug\Biblioteca.pdb
 C:\Users\aluno\Desktop\Stock\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
 C:\Users\aluno\Desktop\Stock\Biblioteca\obj\Debug\Biblioteca.dll
 C:\Users\aluno\Desktop\Stock\Biblioteca\obj\Debug\Biblioteca.pdb
+C:\Users\daniel\Source\Repos\Stock\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+C:\Users\daniel\Source\Repos\Stock\Biblioteca\obj\Debug\Biblioteca.dll
+C:\Users\daniel\Source\Repos\Stock\Biblioteca\obj\Debug\Biblioteca.pdb
+C:\Users\daniel\Source\Repos\Stock\Biblioteca\bin\Debug\Biblioteca.dll
+C:\Users\daniel\Source\Repos\Stock\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\Users\daniel\Source\Repos\Stock\Biblioteca\bin\Debug\MySql.Data.dll

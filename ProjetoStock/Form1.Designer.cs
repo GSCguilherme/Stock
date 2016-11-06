@@ -30,15 +30,13 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.panelGerente = new System.Windows.Forms.Panel();
+            this.panelCadastro = new System.Windows.Forms.Panel();
             this.txtNickName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbIdade = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
@@ -49,7 +47,7 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbEscolha = new System.Windows.Forms.ComboBox();
-            this.panelGerente.SuspendLayout();
+            this.panelCadastro.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -72,37 +70,34 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // panelGerente
+            // panelCadastro
             // 
-            this.panelGerente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelGerente.Controls.Add(this.txtNickName);
-            this.panelGerente.Controls.Add(this.label5);
-            this.panelGerente.Controls.Add(this.label4);
-            this.panelGerente.Controls.Add(this.txtCep);
-            this.panelGerente.Controls.Add(this.txtEmail);
-            this.panelGerente.Controls.Add(this.label3);
-            this.panelGerente.Controls.Add(this.cbIdade);
-            this.panelGerente.Controls.Add(this.label2);
-            this.panelGerente.Controls.Add(this.txtEndereco);
-            this.panelGerente.Controls.Add(this.label1);
-            this.panelGerente.Controls.Add(this.txtCpf);
-            this.panelGerente.Controls.Add(this.label6);
-            this.panelGerente.Controls.Add(this.label7);
-            this.panelGerente.Controls.Add(this.label8);
-            this.panelGerente.Controls.Add(this.txtSenha);
-            this.panelGerente.Controls.Add(this.txtNome);
-            this.panelGerente.Enabled = false;
-            this.panelGerente.Location = new System.Drawing.Point(139, 54);
-            this.panelGerente.Name = "panelGerente";
-            this.panelGerente.Size = new System.Drawing.Size(409, 245);
-            this.panelGerente.TabIndex = 13;
-            this.panelGerente.Visible = false;
+            this.panelCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelCadastro.Controls.Add(this.txtNickName);
+            this.panelCadastro.Controls.Add(this.label5);
+            this.panelCadastro.Controls.Add(this.label4);
+            this.panelCadastro.Controls.Add(this.txtCep);
+            this.panelCadastro.Controls.Add(this.txtEmail);
+            this.panelCadastro.Controls.Add(this.label3);
+            this.panelCadastro.Controls.Add(this.txtEndereco);
+            this.panelCadastro.Controls.Add(this.label1);
+            this.panelCadastro.Controls.Add(this.txtCpf);
+            this.panelCadastro.Controls.Add(this.label6);
+            this.panelCadastro.Controls.Add(this.label7);
+            this.panelCadastro.Controls.Add(this.label8);
+            this.panelCadastro.Controls.Add(this.txtSenha);
+            this.panelCadastro.Controls.Add(this.txtNome);
+            this.panelCadastro.Location = new System.Drawing.Point(139, 54);
+            this.panelCadastro.Name = "panelCadastro";
+            this.panelCadastro.Size = new System.Drawing.Size(409, 245);
+            this.panelCadastro.TabIndex = 13;
+            this.panelCadastro.Visible = false;
             // 
             // txtNickName
             // 
             this.txtNickName.Location = new System.Drawing.Point(72, 115);
+            this.txtNickName.MaxLength = 15;
             this.txtNickName.Name = "txtNickName";
-            this.txtNickName.PasswordChar = '#';
             this.txtNickName.Size = new System.Drawing.Size(135, 20);
             this.txtNickName.TabIndex = 31;
             // 
@@ -127,7 +122,7 @@
             // txtCep
             // 
             this.txtCep.Location = new System.Drawing.Point(72, 198);
-            this.txtCep.Mask = "00000-00";
+            this.txtCep.Mask = "00000-000";
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(56, 20);
             this.txtCep.TabIndex = 28;
@@ -148,27 +143,6 @@
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 26;
             this.label3.Text = "Email:";
-            // 
-            // cbIdade
-            // 
-            this.cbIdade.FormattingEnabled = true;
-            this.cbIdade.Items.AddRange(new object[] {
-            "Gerente",
-            "Funcionário",
-            "Fornecedor"});
-            this.cbIdade.Location = new System.Drawing.Point(334, 44);
-            this.cbIdade.Name = "cbIdade";
-            this.cbIdade.Size = new System.Drawing.Size(47, 21);
-            this.cbIdade.TabIndex = 25;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(291, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Idade:";
             // 
             // txtEndereco
             // 
@@ -216,7 +190,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(244, 121);
+            this.label8.Location = new System.Drawing.Point(213, 118);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 13);
             this.label8.TabIndex = 14;
@@ -224,7 +198,7 @@
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(288, 115);
+            this.txtSenha.Location = new System.Drawing.Point(260, 115);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '#';
             this.txtSenha.Size = new System.Drawing.Size(100, 20);
@@ -267,15 +241,15 @@
             this.ClientSize = new System.Drawing.Size(989, 340);
             this.Controls.Add(this.cbEscolha);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.panelGerente);
+            this.Controls.Add(this.panelCadastro);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.button1);
             this.MaximizeBox = false;
             this.Name = "FormCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
-            this.panelGerente.ResumeLayout(false);
-            this.panelGerente.PerformLayout();
+            this.panelCadastro.ResumeLayout(false);
+            this.panelCadastro.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,7 +259,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Panel panelGerente;
+        private System.Windows.Forms.Panel panelCadastro;
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -298,8 +272,6 @@
         private System.Windows.Forms.MaskedTextBox txtCep;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbIdade;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNickName;

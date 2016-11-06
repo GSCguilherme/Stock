@@ -9,7 +9,7 @@ namespace Biblioteca.controle
 
         public void connect()
         {
-            string url = "server=localhost; database=stock; uid=root; password='' ";
+            string url = "server=localhost; database=stock; uid=root; password='vertrigo' ";
             conn = new MySqlConnection(url);
             conn.Open();
         }

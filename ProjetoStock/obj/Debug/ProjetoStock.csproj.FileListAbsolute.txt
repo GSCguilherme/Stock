@@ -21,3 +21,15 @@ C:\Users\aluno\Desktop\Stock\ProjetoStock\obj\Debug\ProjetoStock.csprojResolveAs
 C:\Users\aluno\Desktop\Stock\ProjetoStock\obj\Debug\ProjetoStock.FormCadastro.resources
 C:\Users\aluno\Desktop\Stock\ProjetoStock\obj\Debug\ProjetoStock.Properties.Resources.resources
 C:\Users\aluno\Desktop\Stock\ProjetoStock\obj\Debug\ProjetoStock.csproj.GenerateResource.Cache
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\ProjetoStock.exe.config
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\obj\Debug\ProjetoStock.exe
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\obj\Debug\ProjetoStock.pdb
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\obj\Debug\ProjetoStock.csprojResolveAssemblyReference.cache
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\obj\Debug\ProjetoStock.FormCadastro.resources
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\obj\Debug\ProjetoStock.Properties.Resources.resources
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\obj\Debug\ProjetoStock.csproj.GenerateResource.Cache
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\ProjetoStock.exe
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\ProjetoStock.pdb
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\Biblioteca.dll
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\MySql.Data.dll
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\Biblioteca.pdb

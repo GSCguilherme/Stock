@@ -51,7 +51,6 @@ namespace ProjetoStock
                     bgeren.Nome = txtNome.Text;
                     bgeren.Email = txtEmail.Text;
                     bgeren.Endereco = txtEndereco.Text;
-                    bgeren.Idade = cbIdade.Text;
                     bgeren.Nickname = txtNickName.Text;
                     bgeren.Senha_g = txtSenha.Text;
                     bgeren.Cep = txtCep.Text;
@@ -60,17 +59,17 @@ namespace ProjetoStock
                         fa.inserirGerente(bgeren);
                         MessageBox.Show("Gerente Cadastrado com sucesso!");
                     }
-                } else if(escolha.Equals("Funcionario") == true)
+                } else if(escolha.Equals("Funcionário") == true)
                 {
                     bfun.Cpf = txtCpf.Text;
                     bfun.Nome = txtNome.Text;
                     bfun.Email = txtEmail.Text;
                     bfun.Endereco = txtEndereco.Text;
-                    bfun.Idade = cbIdade.Text;
                     bfun.Nickname = txtNickName.Text;
                     bfun.Senha = txtSenha.Text;
                     bfun.Cep = txtCep.Text;
                     fa.inserirFuncionario(bfun);
+                    MessageBox.Show("Funcionário inserido com sucesso !");
                 }
 
             }
@@ -81,7 +80,7 @@ namespace ProjetoStock
         }
         private void cbEscolha_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            panelCadastro.Visible = true;
         }
     }
 }

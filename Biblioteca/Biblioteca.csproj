@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controle\Conexao.cs" />
+    <Compile Include="controle\dados\DFuncionario.cs" />
     <Compile Include="controle\dados\DGerente.cs" />
+    <Compile Include="controle\negocios\NFuncionario.cs" />
     <Compile Include="controle\negocios\NGerente.cs" />
     <Compile Include="Fachada.cs" />
     <Compile Include="modelo\basicas\Fornecedor.cs" />

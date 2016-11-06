@@ -5,7 +5,6 @@ namespace Biblioteca.modelo.basicas
     {
         private string cpf;
         private string nome;
-        private string idade;
         private string email;
         private string endereco;
         private string cep;
@@ -33,19 +32,6 @@ namespace Biblioteca.modelo.basicas
             set
             {
                 nome = value;
-            }
-        }
-
-        public string Idade
-        {
-            get
-            {
-                return idade;
-            }
-
-            set
-            {
-                idade = value;
             }
         }
 
