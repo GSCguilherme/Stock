@@ -9,7 +9,6 @@ namespace Biblioteca.modelo.basicas
         private string telefone;
         private string email;
         private string endereco;
-        private string numero;
         private string cidade;
         private string estado;
         private string cep;
@@ -76,19 +75,6 @@ namespace Biblioteca.modelo.basicas
             set
             {
                 endereco = value;
-            }
-        }
-
-        public string Numero
-        {
-            get
-            {
-                return numero;
-            }
-
-            set
-            {
-                numero = value;
             }
         }
 

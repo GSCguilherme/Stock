@@ -4,6 +4,7 @@ using Biblioteca.controle;
 using Biblioteca;
 using Biblioteca.modelo.basicas;
 using Biblioteca.controle.negocios;
+using System.Drawing;
 
 namespace ProjetoStock
 {
@@ -70,6 +71,9 @@ namespace ProjetoStock
                     bfun.Cep = txtCep.Text;
                     fa.inserirFuncionario(bfun);
                     MessageBox.Show("Funcionário inserido com sucesso !");
+                } else if (escolha.Equals("Fornecedor") == true)
+                {
+
                 }
 
             }
@@ -78,9 +82,20 @@ namespace ProjetoStock
                 MessageBox.Show("Erro ao Cadastrar! " + ex);
             }
         }
+
         private void cbEscolha_SelectedIndexChanged(object sender, EventArgs e)
         {
-            panelCadastro.Visible = true;
+            string escolha = cbEscolha.Text;
+            if (escolha.Equals("Fornecedor") == true)
+            {
+                panelFornecedor.Visible = true;
+                panelCadastro.Visible = false;
+            }
+            else if (escolha.Equals("Funcionário") || escolha.Equals("Gerente") == true)
+            {
+                panelCadastro.Visible = true;
+                panelFornecedor.Visible = false;
+            }
         }
     }
 }
