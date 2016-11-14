@@ -45,7 +45,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.cbEscolha = new System.Windows.Forms.ComboBox();
             this.panelFornecedor = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -65,6 +64,7 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listView = new System.Windows.Forms.ListView();
             this.panelCadastro.SuspendLayout();
             this.panelFornecedor.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -230,16 +230,6 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(213, 20);
             this.txtNome.TabIndex = 17;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(255, 7);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(133, 33);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Cadastro";
             // 
             // cbEscolha
             // 
@@ -417,7 +407,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.listView);
             this.panel1.Controls.Add(this.panelFornecedor);
             this.panel1.Controls.Add(this.panelCadastro);
             this.panel1.Controls.Add(this.cbEscolha);
@@ -425,6 +415,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(985, 335);
             this.panel1.TabIndex = 17;
+            // 
+            // listView
+            // 
+            this.listView.Location = new System.Drawing.Point(541, 55);
+            this.listView.Name = "listView";
+            this.listView.Size = new System.Drawing.Size(423, 249);
+            this.listView.TabIndex = 17;
+            this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.Visible = false;
             // 
             // FormCadastro
             // 
@@ -443,7 +442,6 @@
             this.panelFornecedor.ResumeLayout(false);
             this.panelFornecedor.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -459,7 +457,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cbEscolha;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox txtCep;
@@ -487,6 +484,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListView listView;
     }
 }
 

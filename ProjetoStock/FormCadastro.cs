@@ -17,37 +17,37 @@ namespace ProjetoStock
         public FormCadastro()
         {
             InitializeComponent();
+            formarTabela();
         }
-        public void teste()
+        public void formarTabela()
         {
+            listView.Items.Clear();
+            listView.Columns.Clear();
+            // listView.Visible = true;
 
+            listView.View = View.Details;
+        }
+        public void teste() {
             Conexao conn = new Conexao();
             // Um simples teste para a conexão, depois pode remover as mensagens
-            try
-            {
+            try {
                 conn.connect();
                 MessageBox.Show("Conectado ao MySQL!");
                 conn.disconnect();
                 MessageBox.Show("Fechando conexão");
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 MessageBox.Show("Erro ao conectar com o banco: " + ex);
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        private void button1_Click(object sender, EventArgs e) {
             teste();
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void btnCadastrar_Click(object sender, EventArgs e) {
+            try {
                 string escolha = cbEscolha.Text;
-                if (escolha.Equals("Gerente") == true)
-                {
+                if (escolha.Equals("Gerente") == true) {
                     bgeren.Cpf = txtCpf.Text;
                     bgeren.Nome = txtNome.Text;
                     bgeren.Email = txtEmail.Text;
@@ -86,15 +86,23 @@ namespace ProjetoStock
         private void cbEscolha_SelectedIndexChanged(object sender, EventArgs e)
         {
             string escolha = cbEscolha.Text;
+            listView.Visible = true;
             if (escolha.Equals("Fornecedor") == true)
             {
+                formarTabela();
                 panelFornecedor.Visible = true;
                 panelCadastro.Visible = false;
+
+                listView.Columns.Add("CNPJ", 110);
+                listView.Columns.Add("Razão Social", 110);
             }
             else if (escolha.Equals("Funcionário") || escolha.Equals("Gerente") == true)
             {
                 panelCadastro.Visible = true;
                 panelFornecedor.Visible = false;
+                formarTabela();
+                listView.Columns.Add("CPF", 110);
+                listView.Columns.Add("Nome", 110);
             }
         }
     }
