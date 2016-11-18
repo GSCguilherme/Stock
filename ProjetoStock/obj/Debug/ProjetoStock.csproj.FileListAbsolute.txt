@@ -33,3 +33,4 @@ C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\ProjetoStock.pdb
 C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\Biblioteca.dll
 C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\MySql.Data.dll
 C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\Biblioteca.pdb
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\obj\Debug\ProjetoStock.Index.resources
