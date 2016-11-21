@@ -133,7 +133,7 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(227, 137);
+            this.comboBox3.Location = new System.Drawing.Point(226, 132);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(85, 21);
             this.comboBox3.TabIndex = 7;
@@ -141,7 +141,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(156, 142);
+            this.label5.Location = new System.Drawing.Point(155, 137);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 6;
@@ -149,7 +149,7 @@
             // 
             // maskedTextBox3
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(81, 138);
+            this.maskedTextBox3.Location = new System.Drawing.Point(80, 133);
             this.maskedTextBox3.Mask = "0000,00";
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(47, 20);
@@ -158,7 +158,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 142);
+            this.label4.Location = new System.Drawing.Point(36, 137);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 4;
@@ -166,7 +166,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(81, 104);
+            this.textBox3.Location = new System.Drawing.Point(80, 99);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(231, 20);
             this.textBox3.TabIndex = 3;
@@ -174,7 +174,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 107);
+            this.label3.Location = new System.Drawing.Point(36, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 2;
@@ -183,7 +183,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(107, 75);
+            this.comboBox2.Location = new System.Drawing.Point(106, 70);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(205, 21);
             this.comboBox2.TabIndex = 1;
@@ -191,7 +191,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 78);
+            this.label2.Location = new System.Drawing.Point(36, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 0;
@@ -200,6 +200,7 @@
             // panelM
             // 
             this.panelM.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelM.BackgroundImage")));
+            this.panelM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelM.Location = new System.Drawing.Point(34, 36);
             this.panelM.Name = "panelM";
             this.panelM.Size = new System.Drawing.Size(36, 33);
@@ -536,6 +537,7 @@
             // lblListarGerente
             // 
             this.lblListarGerente.AutoSize = true;
+            this.lblListarGerente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblListarGerente.Location = new System.Drawing.Point(330, 14);
             this.lblListarGerente.Name = "lblListarGerente";
             this.lblListarGerente.Size = new System.Drawing.Size(45, 13);
@@ -545,6 +547,7 @@
             // lblListarFuncionario
             // 
             this.lblListarFuncionario.AutoSize = true;
+            this.lblListarFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblListarFuncionario.Location = new System.Drawing.Point(216, 14);
             this.lblListarFuncionario.Name = "lblListarFuncionario";
             this.lblListarFuncionario.Size = new System.Drawing.Size(62, 13);
@@ -554,6 +557,7 @@
             // lblListarFornecedor
             // 
             this.lblListarFornecedor.AutoSize = true;
+            this.lblListarFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblListarFornecedor.Location = new System.Drawing.Point(105, 14);
             this.lblListarFornecedor.Name = "lblListarFornecedor";
             this.lblListarFornecedor.Size = new System.Drawing.Size(61, 13);
@@ -563,6 +567,7 @@
             // lblListarProduto
             // 
             this.lblListarProduto.AutoSize = true;
+            this.lblListarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblListarProduto.Location = new System.Drawing.Point(7, 14);
             this.lblListarProduto.Name = "lblListarProduto";
             this.lblListarProduto.Size = new System.Drawing.Size(44, 13);
@@ -615,6 +620,7 @@
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Visible = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // panelMenu
             // 
@@ -635,7 +641,8 @@
             // lblMovimentacao
             // 
             this.lblMovimentacao.AutoSize = true;
-            this.lblMovimentacao.Location = new System.Drawing.Point(3, 133);
+            this.lblMovimentacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMovimentacao.Location = new System.Drawing.Point(5, 136);
             this.lblMovimentacao.Name = "lblMovimentacao";
             this.lblMovimentacao.Size = new System.Drawing.Size(77, 13);
             this.lblMovimentacao.TabIndex = 26;
@@ -644,7 +651,8 @@
             // lblRelatorio
             // 
             this.lblRelatorio.AutoSize = true;
-            this.lblRelatorio.Location = new System.Drawing.Point(4, 111);
+            this.lblRelatorio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblRelatorio.Location = new System.Drawing.Point(5, 118);
             this.lblRelatorio.Name = "lblRelatorio";
             this.lblRelatorio.Size = new System.Drawing.Size(78, 13);
             this.lblRelatorio.TabIndex = 4;
@@ -653,7 +661,8 @@
             // lblProduto
             // 
             this.lblProduto.AutoSize = true;
-            this.lblProduto.Location = new System.Drawing.Point(4, 88);
+            this.lblProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblProduto.Location = new System.Drawing.Point(5, 78);
             this.lblProduto.Name = "lblProduto";
             this.lblProduto.Size = new System.Drawing.Size(92, 13);
             this.lblProduto.TabIndex = 3;
@@ -663,7 +672,8 @@
             // lblFornecedor
             // 
             this.lblFornecedor.AutoSize = true;
-            this.lblFornecedor.Location = new System.Drawing.Point(4, 45);
+            this.lblFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblFornecedor.Location = new System.Drawing.Point(5, 40);
             this.lblFornecedor.Name = "lblFornecedor";
             this.lblFornecedor.Size = new System.Drawing.Size(109, 13);
             this.lblFornecedor.TabIndex = 2;
@@ -673,7 +683,8 @@
             // lblFuncionario
             // 
             this.lblFuncionario.AutoSize = true;
-            this.lblFuncionario.Location = new System.Drawing.Point(4, 66);
+            this.lblFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblFuncionario.Location = new System.Drawing.Point(5, 58);
             this.lblFuncionario.Name = "lblFuncionario";
             this.lblFuncionario.Size = new System.Drawing.Size(110, 13);
             this.lblFuncionario.TabIndex = 1;
@@ -683,7 +694,8 @@
             // lblGerente
             // 
             this.lblGerente.AutoSize = true;
-            this.lblGerente.Location = new System.Drawing.Point(4, 19);
+            this.lblGerente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblGerente.Location = new System.Drawing.Point(5, 22);
             this.lblGerente.Name = "lblGerente";
             this.lblGerente.Size = new System.Drawing.Size(93, 13);
             this.lblGerente.TabIndex = 0;
