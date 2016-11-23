@@ -33,6 +33,7 @@
     <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,10 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controle\Conexao.cs" />
+    <Compile Include="controle\dados\DFornecedor.cs" />
     <Compile Include="controle\dados\DFuncionario.cs" />
     <Compile Include="controle\dados\DGerente.cs" />
+    <Compile Include="controle\dados\DProduto.cs" />
+    <Compile Include="controle\negocios\NFornecedor.cs" />
     <Compile Include="controle\negocios\NFuncionario.cs" />
     <Compile Include="controle\negocios\NGerente.cs" />
+    <Compile Include="controle\negocios\NProduto.cs" />
     <Compile Include="Fachada.cs" />
     <Compile Include="modelo\basicas\Fornecedor.cs" />
     <Compile Include="modelo\basicas\Funcionario.cs" />
@@ -57,6 +62,7 @@
     <Compile Include="modelo\interfaces\IFornecedor.cs" />
     <Compile Include="modelo\interfaces\IFuncionario.cs" />
     <Compile Include="modelo\interfaces\IGerente.cs" />
+    <Compile Include="modelo\interfaces\IProduto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

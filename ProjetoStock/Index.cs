@@ -3,19 +3,56 @@ using Biblioteca.modelo.basicas;
 using System.Windows.Forms;
 using Biblioteca;
 using Biblioteca.controle.negocios;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjetoStock
 {
     public partial class Index : Form
     {
-        string option,option2;
+        string option;
         Fachada fa = new Fachada();
         Gerente bgeren = new Gerente();
+        Produto bprod = new Produto();
+        Fornecedor bforn = new Fornecedor();
         Funcionario bfun = new Funcionario();
         NGerente ngeren = new NGerente();
+        List<Fornecedor> lForn = new List<Fornecedor>();
+        List<Produto> lProd = new List<Produto>();
         public Index()
         {
             InitializeComponent();
+            listFornecedor();
+            popularQtd();
+        }
+        private void carregarTabela()
+        {
+            tbPrincipal.Items.Clear();
+            tbPrincipal.Columns.Clear();
+
+            tbPrincipal.View = View.Details;
+            tbPrincipal.Columns.Add("Cod Produto", 110);
+            tbPrincipal.Columns.Add("Fornecedor", 110);
+            tbPrincipal.Columns.Add("Produto", 80);
+            tbPrincipal.Columns.Add("Horário", 60);
+            tbPrincipal.Columns.Add("Consulta", 75);
+
+            lProd = fa.listarProduto(bprod);
+        }
+
+        private void listFornecedor(){
+            cbFornecedor.Items.Clear();
+            Fornecedor bforne = new Fornecedor();
+            lForn = fa.listarFornecedor(bforne);
+            foreach (Fornecedor bForn in lForn) {
+                cbFornecedor.Items.Add(bForn.RazSocial);
+            }
+        }
+
+        private void popularQtd(){
+            for (int i = 1; i < 101; i++) {
+                cbQtd.Items.Add(i);
+            }
         }
 
         private void lblGerente_Click(object sender, EventArgs e)
@@ -67,6 +104,7 @@ namespace ProjetoStock
 
         private void lblFornecedor_Click(object sender, EventArgs e)
         {
+            this.option = "fornecedor";
             #region Setando Visible = true or false
             if (panelCadastro.Visible == true || panelProduto.Visible == true)
             {
@@ -110,6 +148,7 @@ namespace ProjetoStock
 
         private void lblProduto_Click(object sender, EventArgs e)
         {
+            this.option = "produto";
             #region Setando Visible = true or false
             if (panelFornecedor.Visible == true || panelCadastro.Visible == true){
                 panelFornecedor.Visible = false;
@@ -153,7 +192,28 @@ namespace ProjetoStock
                 bfun.Cep = txtCep.Text;
                 fa.inserirFuncionario(bfun);
                 MessageBox.Show("Funcionário inserido com sucesso !");
+            }else if (option.Equals("produto")){
+                try
+                {
+                    bprod.Fornecedor = lForn.ElementAt(cbFornecedor.SelectedIndex);
+                    bprod.Nome_prod = txtNomeProduto.Text;
+                    bprod.Qtd_prod = Convert.ToInt32(cbQtd.Text);
+                    bprod.Valor = Convert.ToDouble(tmValor.Text);
+                    fa.inserirProduto(bprod);
+                    MessageBox.Show("Produto inserido com sucesso!");
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show("Erro ao Cadastrar o Produto " + x);
+                }
+
             }
+
+        }
+
+        private void lblListarProduto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

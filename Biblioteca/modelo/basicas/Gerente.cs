@@ -6,28 +6,22 @@ namespace Biblioteca.modelo.basicas
         private string nickname;
         private string senha_g;
 
-        public string Nickname
-        {
-            get
-            {
+        public string Nickname{
+            get{
                 return nickname;
             }
 
-            set
-            {
+            set{
                 nickname = value;
             }
         }
 
-        public string Senha_g
-        {
-            get
-            {
+        public string Senha_g{
+            get{
                 return senha_g;
             }
 
-            set
-            {
+            set{
                 senha_g = value;
             }
         }

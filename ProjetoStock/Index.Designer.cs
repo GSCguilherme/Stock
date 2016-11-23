@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Index));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelProduto = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbQtd = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.tmValor = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbFornecedor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelM = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -78,9 +78,8 @@
             this.lblListarFuncionario = new System.Windows.Forms.Label();
             this.lblListarFornecedor = new System.Windows.Forms.Label();
             this.lblListarProduto = new System.Windows.Forms.Label();
-            this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.tbPrincipal = new System.Windows.Forms.ListView();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
@@ -116,13 +115,13 @@
             // panelProduto
             // 
             this.panelProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelProduto.Controls.Add(this.comboBox3);
+            this.panelProduto.Controls.Add(this.cbQtd);
             this.panelProduto.Controls.Add(this.label5);
-            this.panelProduto.Controls.Add(this.maskedTextBox3);
+            this.panelProduto.Controls.Add(this.tmValor);
             this.panelProduto.Controls.Add(this.label4);
-            this.panelProduto.Controls.Add(this.textBox3);
+            this.panelProduto.Controls.Add(this.txtNomeProduto);
             this.panelProduto.Controls.Add(this.label3);
-            this.panelProduto.Controls.Add(this.comboBox2);
+            this.panelProduto.Controls.Add(this.cbFornecedor);
             this.panelProduto.Controls.Add(this.label2);
             this.panelProduto.Location = new System.Drawing.Point(131, 71);
             this.panelProduto.Name = "panelProduto";
@@ -130,13 +129,14 @@
             this.panelProduto.TabIndex = 21;
             this.panelProduto.Visible = false;
             // 
-            // comboBox3
+            // cbQtd
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(226, 132);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(85, 21);
-            this.comboBox3.TabIndex = 7;
+            this.cbQtd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbQtd.FormattingEnabled = true;
+            this.cbQtd.Location = new System.Drawing.Point(226, 132);
+            this.cbQtd.Name = "cbQtd";
+            this.cbQtd.Size = new System.Drawing.Size(85, 21);
+            this.cbQtd.TabIndex = 7;
             // 
             // label5
             // 
@@ -147,13 +147,13 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Quantidade:";
             // 
-            // maskedTextBox3
+            // tmValor
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(80, 133);
-            this.maskedTextBox3.Mask = "0000,00";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(47, 20);
-            this.maskedTextBox3.TabIndex = 5;
+            this.tmValor.Location = new System.Drawing.Point(80, 133);
+            this.tmValor.Mask = "0000,00";
+            this.tmValor.Name = "tmValor";
+            this.tmValor.Size = new System.Drawing.Size(47, 20);
+            this.tmValor.TabIndex = 5;
             // 
             // label4
             // 
@@ -164,12 +164,12 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Valor:";
             // 
-            // textBox3
+            // txtNomeProduto
             // 
-            this.textBox3.Location = new System.Drawing.Point(80, 99);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(231, 20);
-            this.textBox3.TabIndex = 3;
+            this.txtNomeProduto.Location = new System.Drawing.Point(80, 99);
+            this.txtNomeProduto.Name = "txtNomeProduto";
+            this.txtNomeProduto.Size = new System.Drawing.Size(231, 20);
+            this.txtNomeProduto.TabIndex = 3;
             // 
             // label3
             // 
@@ -180,13 +180,14 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Nome:";
             // 
-            // comboBox2
+            // cbFornecedor
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(106, 70);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(205, 21);
-            this.comboBox2.TabIndex = 1;
+            this.cbFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFornecedor.FormattingEnabled = true;
+            this.cbFornecedor.Location = new System.Drawing.Point(106, 70);
+            this.cbFornecedor.Name = "cbFornecedor";
+            this.cbFornecedor.Size = new System.Drawing.Size(205, 21);
+            this.cbFornecedor.TabIndex = 1;
             // 
             // label2
             // 
@@ -524,9 +525,8 @@
             this.panelListar.Controls.Add(this.lblListarFuncionario);
             this.panelListar.Controls.Add(this.lblListarFornecedor);
             this.panelListar.Controls.Add(this.lblListarProduto);
-            this.panelListar.Controls.Add(this.btnAtualizar);
             this.panelListar.Controls.Add(this.btnEditar);
-            this.panelListar.Controls.Add(this.listView1);
+            this.panelListar.Controls.Add(this.tbPrincipal);
             this.panelListar.Controls.Add(this.btnDeletar);
             this.panelListar.Controls.Add(this.btnCadastrar);
             this.panelListar.Location = new System.Drawing.Point(511, 50);
@@ -573,15 +573,7 @@
             this.lblListarProduto.Size = new System.Drawing.Size(44, 13);
             this.lblListarProduto.TabIndex = 22;
             this.lblListarProduto.Text = "Produto";
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.Location = new System.Drawing.Point(253, 243);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnAtualizar.TabIndex = 21;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.lblListarProduto.Click += new System.EventHandler(this.lblListarProduto_Click);
             // 
             // btnEditar
             // 
@@ -593,13 +585,13 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Visible = false;
             // 
-            // listView1
+            // tbPrincipal
             // 
-            this.listView1.Location = new System.Drawing.Point(0, 35);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(446, 202);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.tbPrincipal.Location = new System.Drawing.Point(0, 35);
+            this.tbPrincipal.Name = "tbPrincipal";
+            this.tbPrincipal.Size = new System.Drawing.Size(446, 202);
+            this.tbPrincipal.TabIndex = 0;
+            this.tbPrincipal.UseCompatibleStateImageBehavior = false;
             // 
             // btnDeletar
             // 
@@ -709,6 +701,7 @@
             this.ClientSize = new System.Drawing.Size(984, 391);
             this.Controls.Add(this.panel1);
             this.Name = "Index";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Index";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -730,13 +723,13 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelProduto;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbQtd;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox tmValor;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbFornecedor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelM;
         private System.Windows.Forms.Label label1;
@@ -777,9 +770,8 @@
         private System.Windows.Forms.Label lblListarFuncionario;
         private System.Windows.Forms.Label lblListarFornecedor;
         private System.Windows.Forms.Label lblListarProduto;
-        private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView tbPrincipal;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Panel panelMenu;

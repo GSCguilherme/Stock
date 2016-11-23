@@ -5,10 +5,12 @@ using Biblioteca.modelo.basicas;
 using Biblioteca.modelo.interfaces;
 namespace Biblioteca
 {
-   public class Fachada : IGerente, IFuncionario, IFornecedor
+   public class Fachada : IGerente, IFuncionario, IFornecedor, IProduto
     {
+        NProduto nprod = new NProduto();
         NGerente ngeren = new NGerente();
         NFuncionario nfun = new NFuncionario();
+        NFornecedor nforn = new NFornecedor();
 
         #region FORNECEDOR
         public void inserirFornecedor(Fornecedor bforn)
@@ -28,7 +30,7 @@ namespace Biblioteca
 
         public List<Fornecedor> listarFornecedor(Fornecedor bforn)
         {
-            throw new NotImplementedException();
+            return nforn.listarFornecedor(bforn);
         }
         #endregion
 
@@ -68,6 +70,27 @@ namespace Biblioteca
             throw new NotImplementedException();
         }
         public List<Gerente> listarGerente(Gerente bgeren)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+        #region PRODUTO
+        public void inserirProduto(Produto bprod)
+        {
+            nprod.inserirProduto(bprod);
+        }
+
+        public void alterarProduto(Produto bprod)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void deletarProduto(Produto bprod)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Produto> listarProduto(Produto bprod)
         {
             throw new NotImplementedException();
         }

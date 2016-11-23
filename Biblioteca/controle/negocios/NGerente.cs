@@ -10,9 +10,7 @@ namespace Biblioteca.controle.negocios
     {
         DGerente dgeren = new DGerente();
     
-        public bool ValidaCPF(string vrCPF)
-
-        {
+        public bool ValidaCPF(string vrCPF){
             string valor = vrCPF.Replace(".", "");
             valor = valor.Replace("-", "");
             if (valor.Length != 11)

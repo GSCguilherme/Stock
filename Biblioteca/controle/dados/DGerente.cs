@@ -2,11 +2,12 @@
 using Biblioteca.modelo.basicas;
 using System.Collections.Generic;
 using System;
-
+using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace Biblioteca.controle.dados
 {
-    class DGerente : IGerente
+    public class DGerente : IGerente
     {
         private Conexao conn = new Conexao();
         public void inserirGerente(Gerente bgeren)
@@ -31,7 +32,33 @@ namespace Biblioteca.controle.dados
 
         public List<Gerente> listarGerente(Gerente bgeren)
         {
-            throw new NotImplementedException();
+            List<Gerente> lGere = new List<Gerente>();
+            try
+            {
+                MySqlConnection con = new MySqlConnection("server=localhost; database=stock; uid=root; password='vertrigo'");
+                string sql = "SELECT cpf_gt, nome_g, email, endereco, cep, nickname, senha FROM gerente";
+                con.Open();
+                MySqlCommand mcd = new MySqlCommand(sql, con);
+                MySqlDataReader mdr = mcd.ExecuteReader();
+                while (mdr.Read())
+                {
+                    Gerente bger = new Gerente();
+                    bger.Cpf = mdr.GetString("cpf_gt");
+                    bger.Nome = mdr.GetString("nome");
+                    bger.Email = mdr.GetString("email");
+                    bger.Endereco = mdr.GetString("endereco");
+                    bger.Cep = mdr.GetString("cep");
+                    bger.Nickname = mdr.GetString("nickname");
+                    bger.Senha_g = mdr.GetString("senha");
+                    lGere.Add(bger);
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro na Consulta do Gerente\n" + ex.Message, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return lGere;
         }
     }
 }
