@@ -12,12 +12,12 @@ namespace Biblioteca.controle.negocios
 
         public void alterarProduto(Produto bprod)
         {
-            throw new NotImplementedException();
+            dprod.alterarProduto(bprod);
         }
 
         public void deletarProduto(Produto bprod)
         {
-            throw new NotImplementedException();
+            dprod.deletarProduto(bprod);
         }
 
         public void inserirProduto(Produto bprod)
@@ -27,7 +27,7 @@ namespace Biblioteca.controle.negocios
 
         public List<Produto> listarProduto(Produto bprod)
         {
-            throw new NotImplementedException();
+            return dprod.listarProduto(bprod);
         }
     }
 }

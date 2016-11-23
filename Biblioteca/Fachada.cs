@@ -82,17 +82,17 @@ namespace Biblioteca
 
         public void alterarProduto(Produto bprod)
         {
-            throw new NotImplementedException();
+            nprod.alterarProduto(bprod);
         }
 
         public void deletarProduto(Produto bprod)
         {
-            throw new NotImplementedException();
+            nprod.deletarProduto(bprod);
         }
 
         public List<Produto> listarProduto(Produto bprod)
         {
-            throw new NotImplementedException();
+            return nprod.listarProduto(bprod);
         }
         #endregion
     }

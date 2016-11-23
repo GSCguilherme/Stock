@@ -584,6 +584,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Visible = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // tbPrincipal
             // 
@@ -592,6 +593,7 @@
             this.tbPrincipal.Size = new System.Drawing.Size(446, 202);
             this.tbPrincipal.TabIndex = 0;
             this.tbPrincipal.UseCompatibleStateImageBehavior = false;
+            this.tbPrincipal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbPrincipal_MouseClick);
             // 
             // btnDeletar
             // 
@@ -602,6 +604,7 @@
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
             this.btnDeletar.Visible = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnCadastrar
             // 

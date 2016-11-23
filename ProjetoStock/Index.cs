@@ -11,6 +11,7 @@ namespace ProjetoStock
     public partial class Index : Form
     {
         string option;
+        string escolha;
         Fachada fa = new Fachada();
         Gerente bgeren = new Gerente();
         Produto bprod = new Produto();
@@ -31,13 +32,23 @@ namespace ProjetoStock
             tbPrincipal.Columns.Clear();
 
             tbPrincipal.View = View.Details;
-            tbPrincipal.Columns.Add("Cod Produto", 110);
+            //tbPrincipal.Columns.Add("Cod Produto", 110);
             tbPrincipal.Columns.Add("Fornecedor", 110);
-            tbPrincipal.Columns.Add("Produto", 80);
-            tbPrincipal.Columns.Add("Horário", 60);
-            tbPrincipal.Columns.Add("Consulta", 75);
+            tbPrincipal.Columns.Add("Produto", 140);
+            tbPrincipal.Columns.Add("Valor", 80);
+            tbPrincipal.Columns.Add("Quant.", 60);
 
             lProd = fa.listarProduto(bprod);
+            foreach (Produto bprodu in lProd)
+            {
+                //Convert.ToString(bprodu.Cod_produto)
+                ListViewItem lvItem = new ListViewItem(bprodu.Fornecedor.RazSocial);
+                //lvItem.SubItems.Add(bprodu.Fornecedor.RazSocial);
+                lvItem.SubItems.Add(bprodu.Nome_prod);
+                lvItem.SubItems.Add("R$ "+ Convert.ToString(bprodu.Valor));
+                lvItem.SubItems.Add(Convert.ToString(bprodu.Qtd_prod));
+                tbPrincipal.Items.Add(lvItem);
+            }
         }
 
         private void listFornecedor(){
@@ -201,6 +212,11 @@ namespace ProjetoStock
                     bprod.Valor = Convert.ToDouble(tmValor.Text);
                     fa.inserirProduto(bprod);
                     MessageBox.Show("Produto inserido com sucesso!");
+                    cbFornecedor.Text = "";
+                    cbQtd.Text = "1";
+                    txtNomeProduto.Text = "";
+                    tmValor.Text = "";
+                    carregarTabela();
                 }
                 catch (Exception x)
                 {
@@ -213,7 +229,64 @@ namespace ProjetoStock
 
         private void lblListarProduto_Click(object sender, EventArgs e)
         {
+            panelProduto.Visible = true;
 
+            escolha = "produto";
+            carregarTabela();
+        }
+
+        private void tbPrincipal_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (escolha.Equals("produto"))
+            {
+                bprod = lProd.ElementAt(tbPrincipal.FocusedItem.Index);
+
+                cbFornecedor.SelectedItem = bprod.Fornecedor.RazSocial;
+                txtNomeProduto.Text = bprod.Nome_prod;
+                tmValor.Text = Convert.ToString(bprod.Valor);
+                cbQtd.SelectedItem = bprod.Qtd_prod;
+
+                btnEditar.Visible = true;
+                btnCadastrar.Visible = false;
+                btnDeletar.Visible = true;
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bprod.Fornecedor = lForn.ElementAt(cbFornecedor.SelectedIndex);
+                bprod.Nome_prod = txtNomeProduto.Text;
+                bprod.Qtd_prod = Convert.ToInt32(cbQtd.Text);
+                bprod.Valor = Convert.ToDouble(tmValor.Text);
+                fa.alterarProduto(bprod);
+                MessageBox.Show("Produto alterado com sucesso!");
+                cbFornecedor.Text = "";
+                cbQtd.Text = "1";
+                txtNomeProduto.Text = "";
+                tmValor.Text = "";
+                carregarTabela();
+            }
+            catch (Exception xc)
+            {
+                MessageBox.Show("Ocorreu um erro durante a alteração do produto ! " + xc);
+            }
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            bprod = lProd.ElementAt(tbPrincipal.FocusedItem.Index);
+            DialogResult dialogResult = MessageBox.Show("tem certeza que deseja deletar o produto " + bprod.Nome_prod + " ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                fa.deletarProduto(bprod);
+                carregarTabela();
+                cbFornecedor.Text = "";
+                cbQtd.Text = "1";
+                txtNomeProduto.Text = "";
+                tmValor.Text = "";
+            }
         }
     }
 }
