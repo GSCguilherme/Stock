@@ -109,12 +109,13 @@
             this.panel1.Controls.Add(this.panelMenu);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(982, 389);
+            this.panel1.Size = new System.Drawing.Size(982, 350);
             this.panel1.TabIndex = 1;
             // 
             // panelProduto
             // 
             this.panelProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelProduto.Controls.Add(this.lblMovimentacao);
             this.panelProduto.Controls.Add(this.cbQtd);
             this.panelProduto.Controls.Add(this.label5);
             this.panelProduto.Controls.Add(this.tmValor);
@@ -621,7 +622,6 @@
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMenu.Controls.Add(this.lblMovimentacao);
             this.panelMenu.Controls.Add(this.lblRelatorio);
             this.panelMenu.Controls.Add(this.lblProduto);
             this.panelMenu.Controls.Add(this.lblFornecedor);
@@ -629,7 +629,7 @@
             this.panelMenu.Controls.Add(this.lblGerente);
             this.panelMenu.Location = new System.Drawing.Point(3, 75);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(122, 216);
+            this.panelMenu.Size = new System.Drawing.Size(122, 147);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Visible = false;
             // 
@@ -637,11 +637,12 @@
             // 
             this.lblMovimentacao.AutoSize = true;
             this.lblMovimentacao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblMovimentacao.Location = new System.Drawing.Point(5, 136);
+            this.lblMovimentacao.Location = new System.Drawing.Point(116, 205);
             this.lblMovimentacao.Name = "lblMovimentacao";
-            this.lblMovimentacao.Size = new System.Drawing.Size(77, 13);
+            this.lblMovimentacao.Size = new System.Drawing.Size(124, 13);
             this.lblMovimentacao.TabIndex = 26;
-            this.lblMovimentacao.Text = "Movimentação";
+            this.lblMovimentacao.Text = "Adicionar Movimentação";
+            this.lblMovimentacao.Visible = false;
             this.lblMovimentacao.Click += new System.EventHandler(this.lblMovimentacao_Click);
             // 
             // lblRelatorio
@@ -702,8 +703,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 391);
+            this.ClientSize = new System.Drawing.Size(984, 351);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "Index";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Index";

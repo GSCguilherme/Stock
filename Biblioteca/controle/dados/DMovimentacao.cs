@@ -48,7 +48,7 @@ namespace Biblioteca.controle.dados
                     bmovim.Cod_mov = mdr.GetInt16("cod_mov");
                     bmovim.Mov = mdr.GetString("mov");
                     bmovim.Tipo = mdr.GetString("tipo");
-                    bmovim.Endereco = mdr.GetString("nome_prod");
+                    bmovim.Endereco = mdr.GetString("endereco");
                     bmovim.Email = mdr.GetString("email");
                     bmovim.Data_mov = mdr.GetString("data_mov");
                     bmovim.Qtd_mov = mdr.GetInt16("qtd_mov");

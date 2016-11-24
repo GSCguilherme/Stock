@@ -5,13 +5,14 @@ using Biblioteca.modelo.basicas;
 using Biblioteca.modelo.interfaces;
 namespace Biblioteca
 {
-   public class Fachada : IGerente, IFuncionario, IFornecedor, IProduto, IMovimentacao
+   public class Fachada : IGerente, IFuncionario, IFornecedor, IProduto, IMovimentacao, IProd_Mov
     {
         NProduto nprod = new NProduto();
         NGerente ngeren = new NGerente();
         NFuncionario nfun = new NFuncionario();
         NFornecedor nforn = new NFornecedor();
         NMovimentacao nmov = new NMovimentacao();
+        NProd_Mov nprod_mov = new NProd_Mov();
 
         #region FORNECEDOR
         public void inserirFornecedor(Fornecedor bforn)
@@ -98,7 +99,6 @@ namespace Biblioteca
         }
         #endregion
 
-        
         #region MOVIMENTACAO
         public void inserirMovimentacao(Movimentacao bmov)
         {
@@ -118,6 +118,28 @@ namespace Biblioteca
         public List<Movimentacao> listarMovimentacao(Movimentacao bmov)
         {
             return nmov.listarMovimentacao(bmov);
+        }
+        #endregion
+
+        #region PRODUTO MOVIMENTACAO
+        public void inserirProd_Mov(ProdutoMovimentacao prod_mov)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void alterarProd_Mov(ProdutoMovimentacao prod_mov)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void deletarProd_Mov(ProdutoMovimentacao prod_mov)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<ProdutoMovimentacao> listarProd_Mov(ProdutoMovimentacao prod_mov)
+        {
+            return nprod_mov.listarProd_Mov(prod_mov);
         } 
         #endregion
 

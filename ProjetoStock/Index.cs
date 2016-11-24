@@ -12,6 +12,7 @@ namespace ProjetoStock
     {
         string option;
         string escolha;
+        FormMovimentacao form = new FormMovimentacao();
         Fachada fa = new Fachada();
 
         Gerente bgeren = new Gerente();
@@ -247,22 +248,31 @@ namespace ProjetoStock
             }
             escolha = "produto";
             carregarTabela();
+            lblMovimentacao.Visible = true;
         }
 
         private void tbPrincipal_MouseClick(object sender, MouseEventArgs e)
         {
-            if (escolha.Equals("produto"))
+            try
             {
-                bprod = lProd.ElementAt(tbPrincipal.FocusedItem.Index);
+                if (escolha.Equals("produto"))
+                {
+                    bprod = lProd.ElementAt(tbPrincipal.FocusedItem.Index);
 
-                cbFornecedor.SelectedItem = bprod.Fornecedor.RazSocial;
-                txtNomeProduto.Text = bprod.Nome_prod;
-                tmValor.Text = Convert.ToString(bprod.Valor);
-                cbQtd.SelectedItem = bprod.Qtd_prod;
+                    cbFornecedor.SelectedItem = bprod.Fornecedor.RazSocial;
+                    txtNomeProduto.Text = bprod.Nome_prod;
+                    tmValor.Text = Convert.ToString(bprod.Valor);
+                    cbQtd.SelectedItem = bprod.Qtd_prod;
 
-                btnEditar.Visible = true;
-                btnCadastrar.Visible = false;
-                btnDeletar.Visible = true;
+
+                    btnEditar.Visible = true;
+                    btnCadastrar.Visible = false;
+                    btnDeletar.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao Selecionar a Listagem \n" + ex.Message, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -305,8 +315,13 @@ namespace ProjetoStock
 
         private void lblMovimentacao_Click(object sender, EventArgs e)
         {
-            FormMovimentacao tela = new FormMovimentacao();
-            tela.Visible = true;
+            bprod = lProd.ElementAt(tbPrincipal.FocusedItem.Index);
+            DialogResult dialogResult = MessageBox.Show("Deseja adicionar uma movimentação " + bprod.Nome_prod + " ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                FormMovimentacao tela = new FormMovimentacao();
+                tela.Visible = true;
+            }
         }
     }
 }
