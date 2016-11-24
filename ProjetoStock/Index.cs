@@ -13,11 +13,14 @@ namespace ProjetoStock
         string option;
         string escolha;
         Fachada fa = new Fachada();
+
         Gerente bgeren = new Gerente();
         Produto bprod = new Produto();
         Fornecedor bforn = new Fornecedor();
         Funcionario bfun = new Funcionario();
+
         NGerente ngeren = new NGerente();
+
         List<Fornecedor> lForn = new List<Fornecedor>();
         List<Produto> lProd = new List<Produto>();
         public Index()
@@ -26,6 +29,7 @@ namespace ProjetoStock
             listFornecedor();
             popularQtd();
         }
+
         private void carregarTabela()
         {
             tbPrincipal.Items.Clear();
@@ -229,8 +233,18 @@ namespace ProjetoStock
 
         private void lblListarProduto_Click(object sender, EventArgs e)
         {
-            panelProduto.Visible = true;
-
+            if (panelProduto.Visible == true && btnEditar.Visible == true && btnDeletar.Visible == true)
+            {
+                btnDeletar.Visible = false;
+                btnEditar.Visible = false;
+                panelProduto.Visible = false;
+            }
+            else
+            {
+                btnDeletar.Visible = true;
+                btnEditar.Visible = true;
+                panelProduto.Visible = true;
+            }
             escolha = "produto";
             carregarTabela();
         }
@@ -287,6 +301,12 @@ namespace ProjetoStock
                 txtNomeProduto.Text = "";
                 tmValor.Text = "";
             }
+        }
+
+        private void lblMovimentacao_Click(object sender, EventArgs e)
+        {
+            FormMovimentacao tela = new FormMovimentacao();
+            tela.Visible = true;
         }
     }
 }

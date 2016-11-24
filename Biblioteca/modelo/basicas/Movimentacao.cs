@@ -1,6 +1,4 @@
-﻿
-
-namespace Biblioteca.modelo.basicas
+﻿namespace Biblioteca.modelo.basicas
 {
     public class Movimentacao
     {

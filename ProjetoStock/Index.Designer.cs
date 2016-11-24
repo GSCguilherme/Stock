@@ -642,6 +642,7 @@
             this.lblMovimentacao.Size = new System.Drawing.Size(77, 13);
             this.lblMovimentacao.TabIndex = 26;
             this.lblMovimentacao.Text = "Movimentação";
+            this.lblMovimentacao.Click += new System.EventHandler(this.lblMovimentacao_Click);
             // 
             // lblRelatorio
             // 

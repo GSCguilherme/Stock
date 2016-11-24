@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormCadastro.cs">
+    <Compile Include="FormMovimentacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCadastro.Designer.cs">
-      <DependentUpon>FormCadastro.cs</DependentUpon>
+    <Compile Include="FormMovimentacao.Designer.cs">
+      <DependentUpon>FormMovimentacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Index.cs">
       <SubType>Form</SubType>
@@ -61,8 +61,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormCadastro.resx">
-      <DependentUpon>FormCadastro.cs</DependentUpon>
+    <EmbeddedResource Include="FormMovimentacao.resx">
+      <DependentUpon>FormMovimentacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
