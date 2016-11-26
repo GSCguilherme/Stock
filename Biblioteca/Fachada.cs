@@ -119,12 +119,17 @@ namespace Biblioteca
         {
             return nmov.listarMovimentacao(bmov);
         }
+
+        public int getMax()
+        {
+            return nmov.getMax();
+        }
         #endregion
 
         #region PRODUTO MOVIMENTACAO
         public void inserirProd_Mov(ProdutoMovimentacao prod_mov)
         {
-            throw new NotImplementedException();
+            nprod_mov.inserirProd_Mov(prod_mov);
         }
 
         public void alterarProd_Mov(ProdutoMovimentacao prod_mov)
@@ -140,7 +145,7 @@ namespace Biblioteca
         public List<ProdutoMovimentacao> listarProd_Mov(ProdutoMovimentacao prod_mov)
         {
             return nprod_mov.listarProd_Mov(prod_mov);
-        } 
+        }
         #endregion
 
     }

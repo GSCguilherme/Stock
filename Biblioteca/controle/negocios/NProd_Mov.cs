@@ -24,7 +24,7 @@ namespace Biblioteca.controle.negocios
 
         public void inserirProd_Mov(ProdutoMovimentacao prod_mov)
         {
-            throw new NotImplementedException();
+            dprod_mov.inserirProd_Mov(prod_mov);
         }
 
         public List<ProdutoMovimentacao> listarProd_Mov(ProdutoMovimentacao prod_mov)

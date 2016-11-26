@@ -316,12 +316,8 @@ namespace ProjetoStock
         private void lblMovimentacao_Click(object sender, EventArgs e)
         {
             bprod = lProd.ElementAt(tbPrincipal.FocusedItem.Index);
-            DialogResult dialogResult = MessageBox.Show("Deseja adicionar uma movimentação " + bprod.Nome_prod + " ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dialogResult == DialogResult.Yes)
-            {
-                FormMovimentacao tela = new FormMovimentacao();
+            var tela = new FormMovimentacao(bprod);
                 tela.Visible = true;
-            }
         }
     }
 }

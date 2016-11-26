@@ -30,11 +30,14 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblListarSaida = new System.Windows.Forms.Label();
+            this.lblListarEntrada = new System.Windows.Forms.Label();
+            this.lblListar = new System.Windows.Forms.Label();
             this.tbMovi = new System.Windows.Forms.ListView();
             this.panelCadastro = new System.Windows.Forms.Panel();
+            this.lblExibirProduto = new System.Windows.Forms.Label();
             this.cbTipo = new System.Windows.Forms.ComboBox();
-            this.cbProduto = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbMovimentacao = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,12 +50,8 @@
             this.dtPickerData = new System.Windows.Forms.DateTimePicker();
             this.txtEmailMovimentacao = new System.Windows.Forms.TextBox();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.lblListar = new System.Windows.Forms.Label();
-            this.lblListarEntrada = new System.Windows.Forms.Label();
-            this.lblListarSaida = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelPrincipal.SuspendLayout();
             this.panelCadastro.SuspendLayout();
@@ -64,7 +63,7 @@
             this.panel1.Controls.Add(this.panelPrincipal);
             this.panel1.Controls.Add(this.panelCadastro);
             this.panel1.Controls.Add(this.btnEditar);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnDeletar);
             this.panel1.Controls.Add(this.btnCadastrar);
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Name = "panel1";
@@ -84,20 +83,62 @@
             this.panelPrincipal.Size = new System.Drawing.Size(354, 268);
             this.panelPrincipal.TabIndex = 21;
             // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblTotal.Location = new System.Drawing.Point(3, 249);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(41, 13);
+            this.lblTotal.TabIndex = 4;
+            this.lblTotal.Text = "label11";
+            // 
+            // lblListarSaida
+            // 
+            this.lblListarSaida.AutoSize = true;
+            this.lblListarSaida.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblListarSaida.Location = new System.Drawing.Point(271, 4);
+            this.lblListarSaida.Name = "lblListarSaida";
+            this.lblListarSaida.Size = new System.Drawing.Size(34, 13);
+            this.lblListarSaida.TabIndex = 3;
+            this.lblListarSaida.Text = "Saida";
+            // 
+            // lblListarEntrada
+            // 
+            this.lblListarEntrada.AutoSize = true;
+            this.lblListarEntrada.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblListarEntrada.Location = new System.Drawing.Point(154, 4);
+            this.lblListarEntrada.Name = "lblListarEntrada";
+            this.lblListarEntrada.Size = new System.Drawing.Size(44, 13);
+            this.lblListarEntrada.TabIndex = 2;
+            this.lblListarEntrada.Text = "Entrada";
+            // 
+            // lblListar
+            // 
+            this.lblListar.AutoSize = true;
+            this.lblListar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblListar.Location = new System.Drawing.Point(30, 4);
+            this.lblListar.Name = "lblListar";
+            this.lblListar.Size = new System.Drawing.Size(37, 13);
+            this.lblListar.TabIndex = 1;
+            this.lblListar.Text = "Todos";
+            // 
             // tbMovi
             // 
+            this.tbMovi.FullRowSelect = true;
             this.tbMovi.Location = new System.Drawing.Point(3, 22);
+            this.tbMovi.MultiSelect = false;
             this.tbMovi.Name = "tbMovi";
             this.tbMovi.Size = new System.Drawing.Size(346, 216);
             this.tbMovi.TabIndex = 0;
             this.tbMovi.UseCompatibleStateImageBehavior = false;
+            this.tbMovi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbMovi_MouseClick);
             // 
             // panelCadastro
             // 
             this.panelCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelCadastro.Controls.Add(this.lblExibirProduto);
             this.panelCadastro.Controls.Add(this.cbTipo);
-            this.panelCadastro.Controls.Add(this.cbProduto);
-            this.panelCadastro.Controls.Add(this.label8);
             this.panelCadastro.Controls.Add(this.label2);
             this.panelCadastro.Controls.Add(this.cbMovimentacao);
             this.panelCadastro.Controls.Add(this.label3);
@@ -114,38 +155,31 @@
             this.panelCadastro.Size = new System.Drawing.Size(372, 269);
             this.panelCadastro.TabIndex = 20;
             // 
+            // lblExibirProduto
+            // 
+            this.lblExibirProduto.AutoSize = true;
+            this.lblExibirProduto.Enabled = false;
+            this.lblExibirProduto.Font = new System.Drawing.Font("Ubuntu Condensed", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExibirProduto.Location = new System.Drawing.Point(90, 11);
+            this.lblExibirProduto.Name = "lblExibirProduto";
+            this.lblExibirProduto.Size = new System.Drawing.Size(93, 29);
+            this.lblExibirProduto.TabIndex = 20;
+            this.lblExibirProduto.Text = "Produto";
+            // 
             // cbTipo
             // 
             this.cbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Location = new System.Drawing.Point(85, 80);
+            this.cbTipo.Location = new System.Drawing.Point(93, 80);
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(187, 21);
             this.cbTipo.TabIndex = 5;
             this.cbTipo.Click += new System.EventHandler(this.cbTipo_Click);
             // 
-            // cbProduto
-            // 
-            this.cbProduto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbProduto.FormattingEnabled = true;
-            this.cbProduto.Location = new System.Drawing.Point(86, 51);
-            this.cbProduto.Name = "cbProduto";
-            this.cbProduto.Size = new System.Drawing.Size(186, 21);
-            this.cbProduto.TabIndex = 19;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(31, 55);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Produto:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(-1, 26);
+            this.label2.Location = new System.Drawing.Point(7, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 2;
@@ -159,7 +193,7 @@
             "",
             "Entrada",
             "Saida"});
-            this.cbMovimentacao.Location = new System.Drawing.Point(85, 21);
+            this.cbMovimentacao.Location = new System.Drawing.Point(93, 49);
             this.cbMovimentacao.Name = "cbMovimentacao";
             this.cbMovimentacao.Size = new System.Drawing.Size(187, 21);
             this.cbMovimentacao.TabIndex = 3;
@@ -168,7 +202,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 86);
+            this.label3.Location = new System.Drawing.Point(55, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 4;
@@ -178,7 +212,7 @@
             // 
             this.cbQtdMovi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbQtdMovi.FormattingEnabled = true;
-            this.cbQtdMovi.Location = new System.Drawing.Point(83, 187);
+            this.cbQtdMovi.Location = new System.Drawing.Point(91, 187);
             this.cbQtdMovi.Name = "cbQtdMovi";
             this.cbQtdMovi.Size = new System.Drawing.Size(54, 21);
             this.cbQtdMovi.TabIndex = 13;
@@ -186,7 +220,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 110);
+            this.label4.Location = new System.Drawing.Point(31, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 6;
@@ -195,7 +229,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 190);
+            this.label7.Location = new System.Drawing.Point(20, 190);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 13);
             this.label7.TabIndex = 12;
@@ -203,7 +237,7 @@
             // 
             // txtEnderecoMovimentacao
             // 
-            this.txtEnderecoMovimentacao.Location = new System.Drawing.Point(84, 105);
+            this.txtEnderecoMovimentacao.Location = new System.Drawing.Point(92, 105);
             this.txtEnderecoMovimentacao.Name = "txtEnderecoMovimentacao";
             this.txtEnderecoMovimentacao.Size = new System.Drawing.Size(188, 20);
             this.txtEnderecoMovimentacao.TabIndex = 7;
@@ -211,7 +245,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(43, 165);
+            this.label6.Location = new System.Drawing.Point(51, 165);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 11;
@@ -220,7 +254,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 138);
+            this.label5.Location = new System.Drawing.Point(51, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 8;
@@ -228,14 +262,15 @@
             // 
             // dtPickerData
             // 
-            this.dtPickerData.Location = new System.Drawing.Point(84, 159);
+            this.dtPickerData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtPickerData.Location = new System.Drawing.Point(92, 159);
             this.dtPickerData.Name = "dtPickerData";
-            this.dtPickerData.Size = new System.Drawing.Size(213, 20);
+            this.dtPickerData.Size = new System.Drawing.Size(188, 20);
             this.dtPickerData.TabIndex = 10;
             // 
             // txtEmailMovimentacao
             // 
-            this.txtEmailMovimentacao.Location = new System.Drawing.Point(84, 133);
+            this.txtEmailMovimentacao.Location = new System.Drawing.Point(92, 133);
             this.txtEmailMovimentacao.Name = "txtEmailMovimentacao";
             this.txtEmailMovimentacao.Size = new System.Drawing.Size(188, 20);
             this.txtEmailMovimentacao.TabIndex = 9;
@@ -248,15 +283,17 @@
             this.btnEditar.TabIndex = 17;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // button3
+            // btnDeletar
             // 
-            this.button3.Location = new System.Drawing.Point(387, 204);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 22);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Deletar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDeletar.Location = new System.Drawing.Point(387, 204);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(74, 22);
+            this.btnDeletar.TabIndex = 16;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnCadastrar
             // 
@@ -267,46 +304,6 @@
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // lblListar
-            // 
-            this.lblListar.AutoSize = true;
-            this.lblListar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblListar.Location = new System.Drawing.Point(30, 4);
-            this.lblListar.Name = "lblListar";
-            this.lblListar.Size = new System.Drawing.Size(37, 13);
-            this.lblListar.TabIndex = 1;
-            this.lblListar.Text = "Todos";
-            // 
-            // lblListarEntrada
-            // 
-            this.lblListarEntrada.AutoSize = true;
-            this.lblListarEntrada.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblListarEntrada.Location = new System.Drawing.Point(154, 4);
-            this.lblListarEntrada.Name = "lblListarEntrada";
-            this.lblListarEntrada.Size = new System.Drawing.Size(44, 13);
-            this.lblListarEntrada.TabIndex = 2;
-            this.lblListarEntrada.Text = "Entrada";
-            // 
-            // lblListarSaida
-            // 
-            this.lblListarSaida.AutoSize = true;
-            this.lblListarSaida.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblListarSaida.Location = new System.Drawing.Point(271, 4);
-            this.lblListarSaida.Name = "lblListarSaida";
-            this.lblListarSaida.Size = new System.Drawing.Size(34, 13);
-            this.lblListarSaida.TabIndex = 3;
-            this.lblListarSaida.Text = "Saida";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblTotal.Location = new System.Drawing.Point(3, 249);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(41, 13);
-            this.lblTotal.TabIndex = 4;
-            this.lblTotal.Text = "label11";
             // 
             // FormMovimentacao
             // 
@@ -341,10 +338,8 @@
         private System.Windows.Forms.DateTimePicker dtPickerData;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbQtdMovi;
-        private System.Windows.Forms.ComboBox cbProduto;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.Panel panelCadastro;
@@ -353,6 +348,7 @@
         private System.Windows.Forms.Label lblListarSaida;
         private System.Windows.Forms.Label lblListarEntrada;
         private System.Windows.Forms.Label lblListar;
+        private System.Windows.Forms.Label lblExibirProduto;
     }
 }
 

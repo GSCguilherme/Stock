@@ -13,16 +13,16 @@ namespace Biblioteca.controle.dados
 
         public void inserirMovimentacao(Movimentacao bmov)
         {
-            string sql = "INSERT INTO movimentacao (cod_mov, mov, tipo, endereco, email, data_mov, qtd_mov)";
-            sql += "VALUES ('" + bmov.Cod_mov + "','" + bmov.Mov + "','" + bmov.Tipo + "','"+bmov.Endereco+"','"+ bmov.Email +"','"+ bmov.Data_mov +"','"+ bmov.Qtd_mov +"')";
+            string sql = "INSERT INTO movimentacao (mov, tipo, endereco, email, data_mov, qtd_mov)";
+            sql += "VALUES ('" + bmov.Mov + "','" + bmov.Tipo + "','"+bmov.Endereco+"','"+ bmov.Email +"','"+ bmov.Data_mov +"','"+ bmov.Qtd_mov +"')";
             conn.update(sql);
         }
 
         public void alterarMovimentacao(Movimentacao bmov)
         {
             string sql = "UPDATE movimentacao ";
-            sql += "SET mov = '" + bmov.Mov + "', tipo = '" + bmov.Tipo + "', endereco = '" + bmov.Endereco + "', email = '" + bmov.Email + "', data_mov = '"+ bmov.Data_mov +"', qtd_mov'"+ bmov.Qtd_mov +"'";
-            sql += "WHERE cod_mov = '" + bmov.Cod_mov + "' ";
+            sql += "SET mov = '" + bmov.Mov + "', tipo = '" + bmov.Tipo + "', endereco = '" + bmov.Endereco + "', email = '" + bmov.Email + "', data_mov = '"+ bmov.Data_mov +"', qtd_mov = '"+ bmov.Qtd_mov +"' ";
+            sql += "WHERE cod_mov = " + bmov.Cod_mov + " ";
             conn.update(sql);
         }
 
@@ -61,6 +61,22 @@ namespace Biblioteca.controle.dados
                 MessageBox.Show("Erro na Consulta da Movimentação \n" + ex.Message, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return lMovi;
+        }
+
+        public int getMax() {
+            Movimentacao bMov = new Movimentacao();
+            try
+            {
+                MySqlConnection con = new MySqlConnection("server=localhost; database=stock; uid=root; password='vertrigo'");
+                string sql = "SELECT MAX(cod_mov) FROM movimentacao";
+                con.Open();
+                MySqlCommand mcd = new MySqlCommand(sql, con);
+                bMov.Cod_mov = (int) mcd.ExecuteScalar();
+                con.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("Erro na Seleção do Movimentação \n" + ex.Message, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return bMov.Cod_mov;
         }
     }
 }

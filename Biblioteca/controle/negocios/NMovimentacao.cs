@@ -22,6 +22,11 @@ namespace Biblioteca.controle.negocios
             dmov.deletarMovimentacao(bmov);
         }
 
+        public int getMax()
+        {
+            return dmov.getMax();
+        }
+
         public void inserirMovimentacao(Movimentacao bmov)
         {
             dmov.inserirMovimentacao(bmov);

@@ -8,5 +8,6 @@ namespace Biblioteca.modelo.interfaces
         void alterarMovimentacao(Movimentacao bmov);
         void deletarMovimentacao(Movimentacao bmov);
         List<Movimentacao> listarMovimentacao(Movimentacao bmov);
+        int getMax();
     }
 }

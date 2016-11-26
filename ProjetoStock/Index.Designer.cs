@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Index));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelProduto = new System.Windows.Forms.Panel();
+            this.lblMovimentacao = new System.Windows.Forms.Label();
             this.cbQtd = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tmValor = new System.Windows.Forms.MaskedTextBox();
@@ -83,7 +84,6 @@
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.lblMovimentacao = new System.Windows.Forms.Label();
             this.lblRelatorio = new System.Windows.Forms.Label();
             this.lblProduto = new System.Windows.Forms.Label();
             this.lblFornecedor = new System.Windows.Forms.Label();
@@ -129,6 +129,18 @@
             this.panelProduto.Size = new System.Drawing.Size(374, 238);
             this.panelProduto.TabIndex = 21;
             this.panelProduto.Visible = false;
+            // 
+            // lblMovimentacao
+            // 
+            this.lblMovimentacao.AutoSize = true;
+            this.lblMovimentacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMovimentacao.Location = new System.Drawing.Point(116, 205);
+            this.lblMovimentacao.Name = "lblMovimentacao";
+            this.lblMovimentacao.Size = new System.Drawing.Size(124, 13);
+            this.lblMovimentacao.TabIndex = 26;
+            this.lblMovimentacao.Text = "Adicionar Movimentação";
+            this.lblMovimentacao.Visible = false;
+            this.lblMovimentacao.Click += new System.EventHandler(this.lblMovimentacao_Click);
             // 
             // cbQtd
             // 
@@ -589,7 +601,9 @@
             // 
             // tbPrincipal
             // 
+            this.tbPrincipal.FullRowSelect = true;
             this.tbPrincipal.Location = new System.Drawing.Point(0, 35);
+            this.tbPrincipal.MultiSelect = false;
             this.tbPrincipal.Name = "tbPrincipal";
             this.tbPrincipal.Size = new System.Drawing.Size(446, 202);
             this.tbPrincipal.TabIndex = 0;
@@ -632,18 +646,6 @@
             this.panelMenu.Size = new System.Drawing.Size(122, 147);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Visible = false;
-            // 
-            // lblMovimentacao
-            // 
-            this.lblMovimentacao.AutoSize = true;
-            this.lblMovimentacao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblMovimentacao.Location = new System.Drawing.Point(116, 205);
-            this.lblMovimentacao.Name = "lblMovimentacao";
-            this.lblMovimentacao.Size = new System.Drawing.Size(124, 13);
-            this.lblMovimentacao.TabIndex = 26;
-            this.lblMovimentacao.Text = "Adicionar Movimentação";
-            this.lblMovimentacao.Visible = false;
-            this.lblMovimentacao.Click += new System.EventHandler(this.lblMovimentacao_Click);
             // 
             // lblRelatorio
             // 
