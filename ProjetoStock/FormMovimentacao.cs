@@ -18,12 +18,14 @@ namespace ProjetoStock
         List<Produto> lProd = new List<Produto>();
         List<Movimentacao> lMovi = new List<Movimentacao>();
         List<ProdutoMovimentacao> lPMovi = new List<ProdutoMovimentacao>();
+
         public FormMovimentacao()
         {
             InitializeComponent();
             popularQtd();
             carregarTabela();
         }
+
         public FormMovimentacao(Produto produto)
         {
             InitializeComponent();

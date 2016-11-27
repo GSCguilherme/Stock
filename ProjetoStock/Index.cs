@@ -21,6 +21,7 @@ namespace ProjetoStock
         Funcionario bfun = new Funcionario();
 
         NGerente ngeren = new NGerente();
+        NFuncionario nfun = new NFuncionario();
 
         List<Fornecedor> lForn = new List<Fornecedor>();
         List<Produto> lProd = new List<Produto>();
@@ -71,6 +72,34 @@ namespace ProjetoStock
             }
         }
 
+        private void limparCampos()
+        {
+            if (option.Equals("gerente"))
+            {
+                txtCpf.Clear();
+                txtNome.Clear();
+                txtEmail.Clear();
+                txtEndereco.Clear();
+                txtNickName.Clear();
+                txtSenha.Clear();
+                txtCep.Clear();
+            } else if (option.Equals("funcionario"))
+            {
+                txtCpf.Clear();
+                txtNome.Clear();
+                txtEmail.Clear();
+                txtEndereco.Clear();
+                txtNickName.Clear();
+                txtSenha.Clear();
+                txtCep.Clear();
+            } else if(option.Equals("produto"))
+            {
+                cbFornecedor.Text = "";
+                cbQtd.Text = "1";
+                txtNomeProduto.Text = "";
+                tmValor.Text = "";
+            }
+        }
         private void lblGerente_Click(object sender, EventArgs e)
         {
             this.option = "gerente";
@@ -194,9 +223,14 @@ namespace ProjetoStock
                 bgeren.Nickname = txtNickName.Text;
                 bgeren.Senha_g = txtSenha.Text;
                 bgeren.Cep = txtCep.Text;
-                if (ngeren.ValidaCPF(bgeren.Cpf) == true){
+                if (ngeren.ValidaCPF(bgeren.Cpf) == true)
+                {
                     fa.inserirGerente(bgeren);
                     MessageBox.Show("Gerente Cadastrado com sucesso!");
+                    limparCampos();
+                } else
+                {
+                    MessageBox.Show("Por favor insira um CPF válido!");
                 }
             } else if(option.Equals("funcionario")) {
                 bfun.Cpf = txtCpf.Text;
@@ -206,9 +240,18 @@ namespace ProjetoStock
                 bfun.Nickname = txtNickName.Text;
                 bfun.Senha = txtSenha.Text;
                 bfun.Cep = txtCep.Text;
-                fa.inserirFuncionario(bfun);
-                MessageBox.Show("Funcionário inserido com sucesso !");
-            }else if (option.Equals("produto")){
+                if (nfun.ValidaCPF(bfun.Cpf) == true)
+                {
+                    fa.inserirFuncionario(bfun);
+                    MessageBox.Show("Funcionário inserido com sucesso !");
+                    limparCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor insira um CPF válido!");
+                }
+            }
+            else if (option.Equals("produto")){
                 try
                 {
                     bprod.Fornecedor = lForn.ElementAt(cbFornecedor.SelectedIndex);
@@ -217,10 +260,7 @@ namespace ProjetoStock
                     bprod.Valor = Convert.ToDouble(tmValor.Text);
                     fa.inserirProduto(bprod);
                     MessageBox.Show("Produto inserido com sucesso!");
-                    cbFornecedor.Text = "";
-                    cbQtd.Text = "1";
-                    txtNomeProduto.Text = "";
-                    tmValor.Text = "";
+                    limparCampos();
                     carregarTabela();
                 }
                 catch (Exception x)

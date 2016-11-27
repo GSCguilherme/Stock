@@ -34,3 +34,15 @@ C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\MySql.Data.dll
 C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\Biblioteca.pdb
 C:\Users\daniel\Source\Repos\Stock\ProjetoStock\obj\Debug\ProjetoStock.Index.resources
 C:\Users\daniel\Source\Repos\Stock\ProjetoStock\obj\Debug\ProjetoStock.FormMovimentacao.resources
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\bin\Debug\ProjetoStock.exe.config
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\obj\Debug\ProjetoStock.exe
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\obj\Debug\ProjetoStock.pdb
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\bin\Debug\ProjetoStock.exe
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\bin\Debug\ProjetoStock.pdb
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\bin\Debug\Biblioteca.dll
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\bin\Debug\Biblioteca.pdb
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\obj\Debug\ProjetoStock.csprojResolveAssemblyReference.cache
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\obj\Debug\ProjetoStock.FormMovimentacao.resources
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\obj\Debug\ProjetoStock.Index.resources
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\obj\Debug\ProjetoStock.Properties.Resources.resources
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\obj\Debug\ProjetoStock.csproj.GenerateResource.Cache
