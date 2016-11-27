@@ -21,7 +21,8 @@ namespace Biblioteca.controle.dados
 
         public void deletarProd_Mov(ProdutoMovimentacao prod_mov)
         {
-            throw new NotImplementedException();
+            string sql = "DELETE FROM prod_mov WHERE prod_mov.cod_mov = '" + prod_mov.Movimentacao.Cod_mov + "' ";
+            conn.update(sql);
         }
 
         public void inserirProd_Mov(ProdutoMovimentacao prod_mov)

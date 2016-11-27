@@ -139,7 +139,7 @@ namespace Biblioteca
 
         public void deletarProd_Mov(ProdutoMovimentacao prod_mov)
         {
-            throw new NotImplementedException();
+            nprod_mov.deletarProd_Mov(prod_mov);
         }
 
         public List<ProdutoMovimentacao> listarProd_Mov(ProdutoMovimentacao prod_mov)

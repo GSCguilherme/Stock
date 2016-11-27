@@ -12,6 +12,7 @@ namespace Biblioteca.controle.negocios
     public class NProd_Mov : IProd_Mov
     {
         DProd_Mov dprod_mov = new DProd_Mov();
+
         public void alterarProd_Mov(ProdutoMovimentacao prod_mov)
         {
             throw new NotImplementedException();
@@ -19,7 +20,7 @@ namespace Biblioteca.controle.negocios
 
         public void deletarProd_Mov(ProdutoMovimentacao prod_mov)
         {
-            throw new NotImplementedException();
+            dprod_mov.deletarProd_Mov(prod_mov);
         }
 
         public void inserirProd_Mov(ProdutoMovimentacao prod_mov)

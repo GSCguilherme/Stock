@@ -55,6 +55,7 @@
     <Compile Include="controle\negocios\NMovimentacao.cs" />
     <Compile Include="controle\negocios\NProduto.cs" />
     <Compile Include="controle\negocios\NProd_Mov.cs" />
+    <Compile Include="controle\xml\Produto.cs" />
     <Compile Include="Fachada.cs" />
     <Compile Include="modelo\basicas\Fornecedor.cs" />
     <Compile Include="modelo\basicas\Funcionario.cs" />
@@ -71,9 +72,7 @@
     <Compile Include="modelo\interfaces\IProd_Mov.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controle\xml\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

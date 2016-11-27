@@ -158,10 +158,14 @@ namespace ProjetoStock
         {
             bprod_mov = lPMovi.ElementAt(tbMovi.FocusedItem.Index);
             DialogResult dialogResult = MessageBox.Show("tem certeza que deseja deletar a movimentação " + bprod_mov.Produto.Nome_prod + " ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            int cod = bprod_mov.Movimentacao.Cod_mov;
+            bmov.Cod_mov = cod;
             if (dialogResult == DialogResult.Yes)
             {
                 fa.deletarProd_Mov(bprod_mov);
-                MessageBox.Show("Movimentação deletada com sussa !");
+                fa.deletarMovimentacao(bmov);
+                MessageBox.Show("Movimentação deletada com sucesso !");
+                carregarTabela();
             }
         }
     }
