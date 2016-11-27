@@ -73,6 +73,174 @@ namespace ProjetoStock
             }
         }
 
+        private bool validarCampos(string opt)
+        {
+            if(opt.Equals("gerente"))
+            {
+                #region
+                //Verifica campos vazios
+                if (txtCpf.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo CPF é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtNome.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Nome é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtEmail.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Email é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtEndereco.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Endereço é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtNickName.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo NickName é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtSenha.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Senha é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtCep.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo CEP é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                //Valida o CPF
+                if (ngeren.ValidaCPF(bgeren.Cpf) == false)
+                {
+                    MessageBox.Show("Por favor insira um CPF válido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                #endregion 
+            }
+            if (opt.Equals("fornecedor"))
+            {
+                #region
+                if (txtCnpj.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo CNPJ é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtRazaoSocial.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Razão Social é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtTelefone.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Telefone é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtFornEmail.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Email é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtFornEndereco.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Endereço é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtFornCep.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Senha é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (cbEstado.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor selecione um estado", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtCidade.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Cidade é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (nfor.validaCNPJ(bforn.Cnpj) == false)
+                {
+                    MessageBox.Show("Por favor insira um CNPJ válido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                #endregion 
+            }
+            if (opt.Equals("funcionario"))
+            {
+                #region
+                if (txtCpf.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo CPF é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtNome.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Nome é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtEmail.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Email é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtEndereco.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Endereço é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtNickName.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo NickName é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtSenha.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Senha é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (txtCep.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo CEP é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if(nfun.ValidaCPF(bfun.Cpf) == false)
+                {
+                    MessageBox.Show("Por favor insira um CPF válido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                #endregion 
+            }
+            if(opt.EndsWith("produto"))
+            {
+                #region
+                if(cbFornecedor.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor selecione um fornecedor", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (txtNomeProduto.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Nome Produto é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if(cbQtd.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor selecione a quantidade de itens", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                #endregion
+            }
+            return true;
+        }
+
         private void limparCampos()
         {
             if (option.Equals("gerente"))
@@ -110,6 +278,7 @@ namespace ProjetoStock
                 tmValor.Text = "";
             }
         }
+
         private void lblGerente_Click(object sender, EventArgs e)
         {
             this.option = "gerente";
@@ -225,72 +394,77 @@ namespace ProjetoStock
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(option);
-            if(option.Equals("gerente")) {
+            if (option.Equals("gerente"))
+            {
                 bgeren.Cpf = txtCpf.Text;
-                bgeren.Nome = txtNome.Text;
-                bgeren.Email = txtEmail.Text;
-                bgeren.Endereco = txtEndereco.Text;
-                bgeren.Nickname = txtNickName.Text;
-                bgeren.Senha_g = txtSenha.Text;
-                bgeren.Cep = txtCep.Text;
-                if (ngeren.ValidaCPF(bgeren.Cpf) == true)
+
+                if (validarCampos(option) == true)
                 {
+                    bgeren.Nome = txtNome.Text;
+                    bgeren.Email = txtEmail.Text;
+                    bgeren.Endereco = txtEndereco.Text;
+                    bgeren.Nickname = txtNickName.Text;
+                    bgeren.Senha_g = txtSenha.Text;
+                    bgeren.Cep = txtCep.Text;
+
                     fa.inserirGerente(bgeren);
                     MessageBox.Show("Gerente Cadastrado com sucesso!");
                     limparCampos();
-                } else
-                {
-                    MessageBox.Show("Por favor insira um CPF válido!");
                 }
-            } else if (option.Equals("fornecedor"))
+            }
+            else if (option.Equals("fornecedor"))
             {
                 bforn.Cnpj = txtCnpj.Text;
-                bforn.RazSocial = txtRazaoSocial.Text;
-                bforn.Telefone = txtTelefone.Text;
-                bforn.Email = txtFornEmail.Text;
-                bforn.Cep = txtFornCep.Text;
-                bforn.Estado = cbEstado.SelectedItem.ToString();
-                bforn.Cidade = txtCidade.Text;
-                if(nfor.validaCNPJ(bforn.Cnpj) == true)
+
+                if (validarCampos(option) == true)
                 {
+                    bforn.RazSocial = txtRazaoSocial.Text;
+                    bforn.Telefone = txtTelefone.Text;
+                    bforn.Email = txtFornEmail.Text;
+                    bforn.Cep = txtFornCep.Text;
+                    bforn.Estado = cbEstado.SelectedItem.ToString();
+                    bforn.Cidade = txtCidade.Text;
+
                     fa.inserirFornecedor(bforn);
                     MessageBox.Show("Fornecedor inserido com sucesso !");
                     limparCampos();
-                } else
-                {
-                    MessageBox.Show("Por favor insira um CNPJ válido!");
                 }
 
-            } else if(option.Equals("funcionario")) {
+            }
+            else if (option.Equals("funcionario"))
+            {
                 bfun.Cpf = txtCpf.Text;
-                bfun.Nome = txtNome.Text;
-                bfun.Email = txtEmail.Text;
-                bfun.Endereco = txtEndereco.Text;
-                bfun.Nickname = txtNickName.Text;
-                bfun.Senha = txtSenha.Text;
-                bfun.Cep = txtCep.Text;
-                if (nfun.ValidaCPF(bfun.Cpf) == true)
+
+                if (validarCampos(option) == true)
                 {
+                    bfun.Nome = txtNome.Text;
+                    bfun.Email = txtEmail.Text;
+                    bfun.Endereco = txtEndereco.Text;
+                    bfun.Nickname = txtNickName.Text;
+                    bfun.Senha = txtSenha.Text;
+                    bfun.Cep = txtCep.Text;
+
                     fa.inserirFuncionario(bfun);
                     MessageBox.Show("Funcionário inserido com sucesso !");
                     limparCampos();
                 }
-                else
-                {
-                    MessageBox.Show("Por favor insira um CPF válido!");
-                }
             }
-            else if (option.Equals("produto")){
+            else if (option.Equals("produto"))
+            {
                 try
                 {
-                    bprod.Fornecedor = lForn.ElementAt(cbFornecedor.SelectedIndex);
-                    bprod.Nome_prod = txtNomeProduto.Text;
-                    bprod.Qtd_prod = Convert.ToInt32(cbQtd.Text);
-                    bprod.Valor = Convert.ToDouble(tmValor.Text);
-                    fa.inserirProduto(bprod);
-                    MessageBox.Show("Produto inserido com sucesso!");
-                    limparCampos();
-                    carregarTabela();
+                    if (validarCampos(option) == true)
+                    {
+                        bprod.Fornecedor = lForn.ElementAt(cbFornecedor.SelectedIndex);
+                        bprod.Nome_prod = txtNomeProduto.Text;
+                        bprod.Qtd_prod = Convert.ToInt32(cbQtd.Text);
+                        bprod.Valor = Convert.ToDouble(tmValor.Text);
+
+                        fa.inserirProduto(bprod);
+                        MessageBox.Show("Produto inserido com sucesso!");
+                        limparCampos();
+                        carregarTabela();
+                    }
                 }
                 catch (Exception x)
                 {
