@@ -58,21 +58,19 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.panelFornecedor = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.txtFornCep = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtFornEndereco = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFornEmail = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtRazaoSocial = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panelListar = new System.Windows.Forms.Panel();
             this.lblListarGerente = new System.Windows.Forms.Label();
@@ -89,6 +87,8 @@
             this.lblFornecedor = new System.Windows.Forms.Label();
             this.lblFuncionario = new System.Windows.Forms.Label();
             this.lblGerente = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panelProduto.SuspendLayout();
             this.panelCadastro.SuspendLayout();
@@ -124,7 +124,7 @@
             this.panelProduto.Controls.Add(this.label3);
             this.panelProduto.Controls.Add(this.cbFornecedor);
             this.panelProduto.Controls.Add(this.label2);
-            this.panelProduto.Location = new System.Drawing.Point(131, 71);
+            this.panelProduto.Location = new System.Drawing.Point(131, 75);
             this.panelProduto.Name = "panelProduto";
             this.panelProduto.Size = new System.Drawing.Size(374, 238);
             this.panelProduto.TabIndex = 21;
@@ -224,10 +224,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ubuntu Condensed", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(341, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 39);
+            this.label1.Size = new System.Drawing.Size(343, 37);
             this.label1.TabIndex = 19;
             this.label1.Text = "Stock Gerenciamento";
             // 
@@ -248,7 +248,7 @@
             this.panelCadastro.Controls.Add(this.label28);
             this.panelCadastro.Controls.Add(this.txtSenha);
             this.panelCadastro.Controls.Add(this.txtNome);
-            this.panelCadastro.Location = new System.Drawing.Point(131, 71);
+            this.panelCadastro.Location = new System.Drawing.Point(131, 75);
             this.panelCadastro.Name = "panelCadastro";
             this.panelCadastro.Size = new System.Drawing.Size(374, 234);
             this.panelCadastro.TabIndex = 18;
@@ -375,44 +375,27 @@
             // panelFornecedor
             // 
             this.panelFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelFornecedor.Controls.Add(this.comboBox1);
-            this.panelFornecedor.Controls.Add(this.label16);
+            this.panelFornecedor.Controls.Add(this.cbEstado);
+            this.panelFornecedor.Controls.Add(this.label6);
             this.panelFornecedor.Controls.Add(this.txtCidade);
             this.panelFornecedor.Controls.Add(this.label15);
-            this.panelFornecedor.Controls.Add(this.maskedTextBox2);
+            this.panelFornecedor.Controls.Add(this.txtFornCep);
             this.panelFornecedor.Controls.Add(this.label14);
-            this.panelFornecedor.Controls.Add(this.textBox2);
+            this.panelFornecedor.Controls.Add(this.txtFornEndereco);
             this.panelFornecedor.Controls.Add(this.label13);
-            this.panelFornecedor.Controls.Add(this.textBox1);
+            this.panelFornecedor.Controls.Add(this.txtFornEmail);
             this.panelFornecedor.Controls.Add(this.label12);
             this.panelFornecedor.Controls.Add(this.txtTelefone);
             this.panelFornecedor.Controls.Add(this.label10);
             this.panelFornecedor.Controls.Add(this.txtRazaoSocial);
             this.panelFornecedor.Controls.Add(this.label9);
-            this.panelFornecedor.Controls.Add(this.maskedTextBox1);
+            this.panelFornecedor.Controls.Add(this.txtCnpj);
             this.panelFornecedor.Controls.Add(this.label7);
             this.panelFornecedor.Location = new System.Drawing.Point(131, 75);
             this.panelFornecedor.Name = "panelFornecedor";
             this.panelFornecedor.Size = new System.Drawing.Size(370, 234);
             this.panelFornecedor.TabIndex = 17;
             this.panelFornecedor.Visible = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(63, 193);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(57, 21);
-            this.comboBox1.TabIndex = 36;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(10, 198);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(43, 13);
-            this.label16.TabIndex = 35;
-            this.label16.Text = "Estado:";
             // 
             // txtCidade
             // 
@@ -430,14 +413,14 @@
             this.label15.TabIndex = 33;
             this.label15.Text = "Cidade:";
             // 
-            // maskedTextBox2
+            // txtFornCep
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(64, 165);
-            this.maskedTextBox2.Mask = "00000-000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(56, 20);
-            this.maskedTextBox2.TabIndex = 32;
-            this.maskedTextBox2.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtFornCep.Location = new System.Drawing.Point(64, 165);
+            this.txtFornCep.Mask = "00000-000";
+            this.txtFornCep.Name = "txtFornCep";
+            this.txtFornCep.Size = new System.Drawing.Size(56, 20);
+            this.txtFornCep.TabIndex = 32;
+            this.txtFornCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label14
             // 
@@ -448,12 +431,12 @@
             this.label14.TabIndex = 31;
             this.label14.Text = "Cep:";
             // 
-            // textBox2
+            // txtFornEndereco
             // 
-            this.textBox2.Location = new System.Drawing.Point(64, 134);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 20);
-            this.textBox2.TabIndex = 30;
+            this.txtFornEndereco.Location = new System.Drawing.Point(64, 134);
+            this.txtFornEndereco.Name = "txtFornEndereco";
+            this.txtFornEndereco.Size = new System.Drawing.Size(213, 20);
+            this.txtFornEndereco.TabIndex = 30;
             // 
             // label13
             // 
@@ -464,12 +447,12 @@
             this.label13.TabIndex = 29;
             this.label13.Text = "Endereço:";
             // 
-            // textBox1
+            // txtFornEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(64, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 20);
-            this.textBox1.TabIndex = 28;
+            this.txtFornEmail.Location = new System.Drawing.Point(64, 105);
+            this.txtFornEmail.Name = "txtFornEmail";
+            this.txtFornEmail.Size = new System.Drawing.Size(213, 20);
+            this.txtFornEmail.TabIndex = 28;
             // 
             // label12
             // 
@@ -514,14 +497,14 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "Razão social:";
             // 
-            // maskedTextBox1
+            // txtCnpj
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(64, 13);
-            this.maskedTextBox1.Mask = "00.000.000/0000-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(113, 20);
-            this.maskedTextBox1.TabIndex = 1;
-            this.maskedTextBox1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtCnpj.Location = new System.Drawing.Point(64, 13);
+            this.txtCnpj.Mask = "00.000.000/0000-00";
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(113, 20);
+            this.txtCnpj.TabIndex = 1;
+            this.txtCnpj.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label7
             // 
@@ -701,6 +684,51 @@
             this.lblGerente.Text = "Cadastrar Gerente";
             this.lblGerente.Click += new System.EventHandler(this.lblGerente_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 198);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Estado:";
+            // 
+            // cbEstado
+            // 
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "Acre",
+            "Alagoas",
+            "Amapá",
+            "Amazonas",
+            "Bahia",
+            "Ceará",
+            "Distrito Federal",
+            "Espírito Santo",
+            "Goiás",
+            "Maranhão",
+            "Mato Grosso",
+            "Mato Grosso do Sul",
+            "Minas Gerais",
+            "Pará",
+            "Paraíba",
+            "Paraná",
+            "Pernambuco",
+            "Piauí",
+            "Rio de Janeiro",
+            "Rio Grande do Norte",
+            "Rio Grande do Sul",
+            "Rondônia",
+            "Roraima",
+            "Santa Catarina",
+            "São Paulo",
+            "Sergipe",
+            "Tocantins"});
+            this.cbEstado.Location = new System.Drawing.Point(61, 195);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(175, 21);
+            this.cbEstado.TabIndex = 36;
+            // 
             // Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -757,21 +785,19 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Panel panelFornecedor;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox txtFornCep;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtFornEndereco;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFornEmail;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtRazaoSocial;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtCnpj;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panelListar;
         private System.Windows.Forms.Label lblListarGerente;
@@ -789,5 +815,7 @@
         private System.Windows.Forms.Label lblFornecedor;
         private System.Windows.Forms.Label lblFuncionario;
         private System.Windows.Forms.Label lblGerente;
+        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.Label label6;
     }
 }

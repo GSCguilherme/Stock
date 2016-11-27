@@ -22,6 +22,7 @@ namespace ProjetoStock
 
         NGerente ngeren = new NGerente();
         NFuncionario nfun = new NFuncionario();
+        NFornecedor nfor = new NFornecedor();
 
         List<Fornecedor> lForn = new List<Fornecedor>();
         List<Produto> lProd = new List<Produto>();
@@ -83,6 +84,15 @@ namespace ProjetoStock
                 txtNickName.Clear();
                 txtSenha.Clear();
                 txtCep.Clear();
+            } else if(option.Equals("fornecedor"))
+            {
+                txtCnpj.Clear();
+                txtRazaoSocial.Clear();
+                txtTelefone.Clear();
+                txtFornEmail.Clear();
+                txtFornEndereco.Clear();
+                txtFornCep.Clear();
+                txtCidade.Clear();
             } else if (option.Equals("funcionario"))
             {
                 txtCpf.Clear();
@@ -232,6 +242,25 @@ namespace ProjetoStock
                 {
                     MessageBox.Show("Por favor insira um CPF válido!");
                 }
+            } else if (option.Equals("fornecedor"))
+            {
+                bforn.Cnpj = txtCnpj.Text;
+                bforn.RazSocial = txtRazaoSocial.Text;
+                bforn.Telefone = txtTelefone.Text;
+                bforn.Email = txtFornEmail.Text;
+                bforn.Cep = txtFornCep.Text;
+                bforn.Estado = cbEstado.SelectedItem.ToString();
+                bforn.Cidade = txtCidade.Text;
+                if(nfor.validaCNPJ(bforn.Cnpj) == true)
+                {
+                    fa.inserirFornecedor(bforn);
+                    MessageBox.Show("Fornecedor inserido com sucesso !");
+                    limparCampos();
+                } else
+                {
+                    MessageBox.Show("Por favor insira um CNPJ válido!");
+                }
+
             } else if(option.Equals("funcionario")) {
                 bfun.Cpf = txtCpf.Text;
                 bfun.Nome = txtNome.Text;
