@@ -17,7 +17,7 @@ namespace Biblioteca
         #region FORNECEDOR
         public void inserirFornecedor(Fornecedor bforn)
         {
-            throw new NotImplementedException();
+            nforn.inserirFornecedor(bforn);
         }
 
         public void alterarFornecedor(Fornecedor bforn)

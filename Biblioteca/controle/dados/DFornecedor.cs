@@ -9,6 +9,15 @@ namespace Biblioteca.controle.dados
 {
     public class DFornecedor : IFornecedor
     {
+        Conexao conn = new Conexao();
+
+        public void inserirFornecedor(Fornecedor bforn)
+        {
+            string sql = "INSERT INTO fornecedor (cnpj, razSocial, telefone, email, cep, estado, cidade) ";
+            sql += "VALUES ('" + bforn.Cnpj + "', '" + bforn.RazSocial + "', '" + bforn.Telefone + " ','" + bforn.Email + "','" + bforn.Cep + "','" + bforn.Estado + "','" + bforn.Cidade + "')";
+            conn.update(sql);
+        }
+
         public void alterarFornecedor(Fornecedor bforn)
         {
             throw new NotImplementedException();
@@ -19,20 +28,18 @@ namespace Biblioteca.controle.dados
             throw new NotImplementedException();
         }
 
-        public void inserirFornecedor(Fornecedor bforn)
+        public List<Fornecedor> listarFornecedor(Fornecedor bforn)
         {
-            throw new NotImplementedException();
-        }
-
-        public List<Fornecedor> listarFornecedor(Fornecedor bforn){
             List<Fornecedor> lForn = new List<Fornecedor>();
-            try{
+            try
+            {
                 MySqlConnection con = new MySqlConnection("server=localhost; database=stock; uid=root; password='vertrigo'");
                 string sql = "SELECT cnpj, razSocial, telefone, email, endereco, numero, cidade, estado, cep FROM fornecedor";
                 con.Open();
                 MySqlCommand mcd = new MySqlCommand(sql, con);
                 MySqlDataReader mdr = mcd.ExecuteReader();
-                while (mdr.Read()){
+                while (mdr.Read())
+                {
                     Fornecedor bforne = new Fornecedor();
                     bforne.Cnpj = mdr.GetString("cnpj");
                     bforne.RazSocial = mdr.GetString("razSocial");
@@ -46,7 +53,8 @@ namespace Biblioteca.controle.dados
                 }
                 con.Close();
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 MessageBox.Show("Erro na Consulta do Fornecedor\n" + ex.Message, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return lForn;

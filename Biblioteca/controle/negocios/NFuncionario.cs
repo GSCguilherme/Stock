@@ -64,6 +64,7 @@ namespace Biblioteca.controle.negocios
         }
 
         DFuncionario dfun = new DFuncionario();
+
         public void alterarFuncionario(Funcionario bfun)
         {
             throw new NotImplementedException();

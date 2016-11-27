@@ -57,7 +57,7 @@ namespace Biblioteca.controle.negocios
 
         public void inserirFornecedor(Fornecedor bforn)
         {
-            throw new NotImplementedException();
+            dforn.inserirFornecedor(bforn);
         }
 
         public List<Fornecedor> listarFornecedor(Fornecedor bforn)
