@@ -13,8 +13,8 @@ namespace Biblioteca.controle.dados
 
         public void inserirFornecedor(Fornecedor bforn)
         {
-            string sql = "INSERT INTO fornecedor (cnpj, razSocial, telefone, email, cep, estado, cidade) ";
-            sql += "VALUES ('" + bforn.Cnpj + "', '" + bforn.RazSocial + "', '" + bforn.Telefone + " ','" + bforn.Email + "','" + bforn.Cep + "','" + bforn.Estado + "','" + bforn.Cidade + "')";
+            string sql = "INSERT INTO fornecedor (cnpj, razSocial, telefone, email, endereco, numero, cep, estado, cidade) ";
+            sql += "VALUES ('" + bforn.Cnpj + "', '" + bforn.RazSocial + "', '" + bforn.Telefone + " ','" + bforn.Email + "','" + bforn.Endereco + "','" + bforn.Numero + "','" + bforn.Cep + "','" + bforn.Estado + "','" + bforn.Cidade + "')";
             conn.update(sql);
         }
 

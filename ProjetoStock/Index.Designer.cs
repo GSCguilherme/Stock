@@ -58,6 +58,8 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.panelFornecedor = new System.Windows.Forms.Panel();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtFornCep = new System.Windows.Forms.MaskedTextBox();
@@ -87,8 +89,8 @@
             this.lblFornecedor = new System.Windows.Forms.Label();
             this.lblFuncionario = new System.Windows.Forms.Label();
             this.lblGerente = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelProduto.SuspendLayout();
             this.panelCadastro.SuspendLayout();
@@ -126,7 +128,7 @@
             this.panelProduto.Controls.Add(this.label2);
             this.panelProduto.Location = new System.Drawing.Point(131, 75);
             this.panelProduto.Name = "panelProduto";
-            this.panelProduto.Size = new System.Drawing.Size(374, 238);
+            this.panelProduto.Size = new System.Drawing.Size(374, 234);
             this.panelProduto.TabIndex = 21;
             this.panelProduto.Visible = false;
             // 
@@ -375,6 +377,8 @@
             // panelFornecedor
             // 
             this.panelFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelFornecedor.Controls.Add(this.txtNumero);
+            this.panelFornecedor.Controls.Add(this.label8);
             this.panelFornecedor.Controls.Add(this.cbEstado);
             this.panelFornecedor.Controls.Add(this.label6);
             this.panelFornecedor.Controls.Add(this.txtCidade);
@@ -397,9 +401,54 @@
             this.panelFornecedor.TabIndex = 17;
             this.panelFornecedor.Visible = false;
             // 
+            // cbEstado
+            // 
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "Acre",
+            "Alagoas",
+            "Amapá",
+            "Amazonas",
+            "Bahia",
+            "Ceará",
+            "Distrito Federal",
+            "Espírito Santo",
+            "Goiás",
+            "Maranhão",
+            "Mato Grosso",
+            "Mato Grosso do Sul",
+            "Minas Gerais",
+            "Pará",
+            "Paraíba",
+            "Paraná",
+            "Pernambuco",
+            "Piauí",
+            "Rio de Janeiro",
+            "Rio Grande do Norte",
+            "Rio Grande do Sul",
+            "Rondônia",
+            "Roraima",
+            "Santa Catarina",
+            "São Paulo",
+            "Sergipe",
+            "Tocantins"});
+            this.cbEstado.Location = new System.Drawing.Point(61, 195);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(175, 21);
+            this.cbEstado.TabIndex = 36;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 198);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Estado:";
+            // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(183, 166);
+            this.txtCidade.Location = new System.Drawing.Point(227, 75);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(128, 20);
             this.txtCidade.TabIndex = 34;
@@ -407,7 +456,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(134, 169);
+            this.label15.Location = new System.Drawing.Point(178, 78);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(43, 13);
             this.label15.TabIndex = 33;
@@ -684,50 +733,21 @@
             this.lblGerente.Text = "Cadastrar Gerente";
             this.lblGerente.Click += new System.EventHandler(this.lblGerente_Click);
             // 
-            // label6
+            // txtNumero
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 198);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Estado:";
+            this.txtNumero.Location = new System.Drawing.Point(199, 163);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(78, 20);
+            this.txtNumero.TabIndex = 38;
             // 
-            // cbEstado
+            // label8
             // 
-            this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Items.AddRange(new object[] {
-            "Acre",
-            "Alagoas",
-            "Amapá",
-            "Amazonas",
-            "Bahia",
-            "Ceará",
-            "Distrito Federal",
-            "Espírito Santo",
-            "Goiás",
-            "Maranhão",
-            "Mato Grosso",
-            "Mato Grosso do Sul",
-            "Minas Gerais",
-            "Pará",
-            "Paraíba",
-            "Paraná",
-            "Pernambuco",
-            "Piauí",
-            "Rio de Janeiro",
-            "Rio Grande do Norte",
-            "Rio Grande do Sul",
-            "Rondônia",
-            "Roraima",
-            "Santa Catarina",
-            "São Paulo",
-            "Sergipe",
-            "Tocantins"});
-            this.cbEstado.Location = new System.Drawing.Point(61, 195);
-            this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(175, 21);
-            this.cbEstado.TabIndex = 36;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(150, 166);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 13);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Número:";
             // 
             // Index
             // 
@@ -817,5 +837,7 @@
         private System.Windows.Forms.Label lblGerente;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.Label label8;
     }
 }

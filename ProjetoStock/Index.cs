@@ -150,6 +150,11 @@ namespace ProjetoStock
                     MessageBox.Show("Campo Endereço é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
+                if (txtNumero.Text == string.Empty)
+                {
+                    MessageBox.Show("Campo Número é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
                 if (txtFornCep.Text == string.Empty)
                 {
                     MessageBox.Show("Campo Senha é requerido!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -259,6 +264,7 @@ namespace ProjetoStock
                 txtTelefone.Clear();
                 txtFornEmail.Clear();
                 txtFornEndereco.Clear();
+                txtNumero.Clear();
                 txtFornCep.Clear();
                 txtCidade.Clear();
             } else if (option.Equals("funcionario"))
@@ -421,6 +427,8 @@ namespace ProjetoStock
                     bforn.RazSocial = txtRazaoSocial.Text;
                     bforn.Telefone = txtTelefone.Text;
                     bforn.Email = txtFornEmail.Text;
+                    bforn.Endereco = txtFornEndereco.Text;
+                    bforn.Numero = txtNumero.Text;
                     bforn.Cep = txtFornCep.Text;
                     bforn.Estado = cbEstado.SelectedItem.ToString();
                     bforn.Cidade = txtCidade.Text;

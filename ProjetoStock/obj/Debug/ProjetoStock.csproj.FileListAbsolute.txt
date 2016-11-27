@@ -46,3 +46,6 @@ C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\obj\Debug\ProjetoStock.FormM
 C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\obj\Debug\ProjetoStock.Index.resources
 C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\obj\Debug\ProjetoStock.Properties.Resources.resources
 C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\obj\Debug\ProjetoStock.csproj.GenerateResource.Cache
+C:\Users\CCE\Documents\Unibratec\backup\Stock - 3\ProjetoStock\bin\Debug\ProjetoStock.exe.config
+C:\Users\CCE\Documents\Unibratec\backup\Stock - 3\ProjetoStock\obj\Debug\ProjetoStock.exe
+C:\Users\CCE\Documents\Unibratec\backup\Stock - 3\ProjetoStock\obj\Debug\ProjetoStock.pdb
