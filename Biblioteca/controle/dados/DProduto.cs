@@ -38,7 +38,9 @@ namespace Biblioteca.controle.dados
             try
             {
                 MySqlConnection con = new MySqlConnection("server=localhost; database=stock; uid=root; password='vertrigo'");
-                string sql = "SELECT cod_prod, pro.cnpj, fornecedor.razSocial, nome_prod, valor, qtd FROM produto AS pro, fornecedor WHERE pro.cnpj = pro.cnpj";
+                /* string sql = "SELECT cod_prod, pro.cnpj, fornecedor.razSocial, nome_prod, valor, qtd FROM produto AS pro, fornecedor WHERE pro.cnpj = pro.cnpj"; */
+
+                string sql = "SELECT produto.cod_prod, produto.cnpj, fornecedor.razSocial, produto.nome_prod, produto.valor, produto.qtd FROM produto INNER JOIN fornecedor ON produto.cnpj = fornecedor.cnpj";
                 con.Open();
                 MySqlCommand mcd = new MySqlCommand(sql, con);
                 MySqlDataReader mdr = mcd.ExecuteReader();

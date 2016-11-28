@@ -1,24 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
 using Biblioteca.controle.negocios;
 using Biblioteca.modelo.basicas;
 
 namespace Service
 {
-    public class Service1 : IService1
-    {
+    public class Service1 : IService1 {
         NGerente        nGeren    = new NGerente();
         NFuncionario    nfun      = new NFuncionario();
         NFornecedor     nforn     = new NFornecedor();
         NProduto        nProd     = new NProduto();
         NMovimentacao   nMov      = new NMovimentacao();
         NProd_Mov       nProd_Mov = new NProd_Mov();
-
 
         #region GERENTE
         public void inserirGerente(Gerente bgeren)
@@ -144,6 +137,5 @@ namespace Service
             return nProd_Mov.listarProd_Mov(prod_mov);
         }
         #endregion
-
     }
 }

@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
 using Biblioteca.modelo.basicas;
 
-namespace Service
-{
-   
+namespace Service {
     [ServiceContract]
     public interface IService1 {
         [OperationContract] void inserirProduto(Produto bprod);
@@ -42,7 +35,5 @@ namespace Service
         [OperationContract] void alterarFuncionario(Funcionario bfun);
         [OperationContract] void deletarFuncionario(Funcionario bfun);
         [OperationContract] List<Funcionario> listarFuncionario(Funcionario bfun);
-
-
     }
 }
