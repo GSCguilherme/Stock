@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using Service;
 
 namespace ProjetoStock
 {
@@ -13,7 +14,7 @@ namespace ProjetoStock
         ProdutoMovimentacao bprod_mov = new ProdutoMovimentacao();
         private Produto prod;
 
-        Fachada fa = new Fachada();
+        Service1 fa = new Service1();
 
         List<Produto> lProd = new List<Produto>();
         List<Movimentacao> lMovi = new List<Movimentacao>();

@@ -5,6 +5,7 @@ using Biblioteca;
 using Biblioteca.controle.negocios;
 using System.Collections.Generic;
 using System.Linq;
+using Service;
 
 namespace ProjetoStock
 {
@@ -13,7 +14,7 @@ namespace ProjetoStock
         string option;
         string escolha;
         FormMovimentacao form = new FormMovimentacao();
-        Fachada fa = new Fachada();
+        Service1 fa = new Service1();
 
         Gerente bgeren = new Gerente();
         Produto bprod = new Produto();
@@ -39,7 +40,6 @@ namespace ProjetoStock
             tbPrincipal.Columns.Clear();
 
             tbPrincipal.View = View.Details;
-            //tbPrincipal.Columns.Add("Cod Produto", 110);
             tbPrincipal.Columns.Add("Fornecedor", 110);
             tbPrincipal.Columns.Add("Produto", 140);
             tbPrincipal.Columns.Add("Valor", 80);
@@ -48,9 +48,7 @@ namespace ProjetoStock
             lProd = fa.listarProduto(bprod);
             foreach (Produto bprodu in lProd)
             {
-                //Convert.ToString(bprodu.Cod_produto)
                 ListViewItem lvItem = new ListViewItem(bprodu.Fornecedor.RazSocial);
-                //lvItem.SubItems.Add(bprodu.Fornecedor.RazSocial);
                 lvItem.SubItems.Add(bprodu.Nome_prod);
                 lvItem.SubItems.Add("R$ "+ Convert.ToString(bprodu.Valor));
                 lvItem.SubItems.Add(Convert.ToString(bprodu.Qtd_prod));

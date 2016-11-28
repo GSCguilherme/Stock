@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:54452/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:54452/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:54452/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Biblioteca.modelo.basicas" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_inserirProduto_InputMessage">
+    <wsdl:part name="parameters" element="tns:inserirProduto" />
+  </wsdl:message>
+  <wsdl:message name="IService1_inserirProduto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inserirProdutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_alterarProduto_InputMessage">
+    <wsdl:part name="parameters" element="tns:alterarProduto" />
+  </wsdl:message>
+  <wsdl:message name="IService1_alterarProduto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:alterarProdutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletarProduto_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletarProduto" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletarProduto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletarProdutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarProduto_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarProduto" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarProduto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarProdutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_inserirMovimentacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:inserirMovimentacao" />
+  </wsdl:message>
+  <wsdl:message name="IService1_inserirMovimentacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inserirMovimentacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_alterarMovimentacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:alterarMovimentacao" />
+  </wsdl:message>
+  <wsdl:message name="IService1_alterarMovimentacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:alterarMovimentacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletarMovimentacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletarMovimentacao" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletarMovimentacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletarMovimentacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarMovimentacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarMovimentacao" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarMovimentacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarMovimentacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getMax_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMax" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getMax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_inserirProd_Mov_InputMessage">
+    <wsdl:part name="parameters" element="tns:inserirProd_Mov" />
+  </wsdl:message>
+  <wsdl:message name="IService1_inserirProd_Mov_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inserirProd_MovResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_alterarProd_Mov_InputMessage">
+    <wsdl:part name="parameters" element="tns:alterarProd_Mov" />
+  </wsdl:message>
+  <wsdl:message name="IService1_alterarProd_Mov_OutputMessage">
+    <wsdl:part name="parameters" element="tns:alterarProd_MovResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletarProd_Mov_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletarProd_Mov" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletarProd_Mov_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletarProd_MovResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarProd_Mov_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarProd_Mov" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarProd_Mov_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarProd_MovResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_inserirGerente_InputMessage">
+    <wsdl:part name="parameters" element="tns:inserirGerente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_inserirGerente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inserirGerenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_alterarGerente_InputMessage">
+    <wsdl:part name="parameters" element="tns:alterarGerente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_alterarGerente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:alterarGerenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletarGerente_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletarGerente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deletarGerente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletarGerenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarGerente_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarGerente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_listarGerente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarGerenteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="inserirProduto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/inserirProduto" message="tns:IService1_inserirProduto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/inserirProdutoResponse" message="tns:IService1_inserirProduto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="alterarProduto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/alterarProduto" message="tns:IService1_alterarProduto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/alterarProdutoResponse" message="tns:IService1_alterarProduto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletarProduto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deletarProduto" message="tns:IService1_deletarProduto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deletarProdutoResponse" message="tns:IService1_deletarProduto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarProduto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listarProduto" message="tns:IService1_listarProduto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listarProdutoResponse" message="tns:IService1_listarProduto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inserirMovimentacao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/inserirMovimentacao" message="tns:IService1_inserirMovimentacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/inserirMovimentacaoResponse" message="tns:IService1_inserirMovimentacao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="alterarMovimentacao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/alterarMovimentacao" message="tns:IService1_alterarMovimentacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/alterarMovimentacaoResponse" message="tns:IService1_alterarMovimentacao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletarMovimentacao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deletarMovimentacao" message="tns:IService1_deletarMovimentacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deletarMovimentacaoResponse" message="tns:IService1_deletarMovimentacao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarMovimentacao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listarMovimentacao" message="tns:IService1_listarMovimentacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listarMovimentacaoResponse" message="tns:IService1_listarMovimentacao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMax">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getMax" message="tns:IService1_getMax_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getMaxResponse" message="tns:IService1_getMax_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inserirProd_Mov">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/inserirProd_Mov" message="tns:IService1_inserirProd_Mov_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/inserirProd_MovResponse" message="tns:IService1_inserirProd_Mov_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="alterarProd_Mov">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/alterarProd_Mov" message="tns:IService1_alterarProd_Mov_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/alterarProd_MovResponse" message="tns:IService1_alterarProd_Mov_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletarProd_Mov">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deletarProd_Mov" message="tns:IService1_deletarProd_Mov_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deletarProd_MovResponse" message="tns:IService1_deletarProd_Mov_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarProd_Mov">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listarProd_Mov" message="tns:IService1_listarProd_Mov_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listarProd_MovResponse" message="tns:IService1_listarProd_Mov_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inserirGerente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/inserirGerente" message="tns:IService1_inserirGerente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/inserirGerenteResponse" message="tns:IService1_inserirGerente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="alterarGerente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/alterarGerente" message="tns:IService1_alterarGerente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/alterarGerenteResponse" message="tns:IService1_alterarGerente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletarGerente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deletarGerente" message="tns:IService1_deletarGerente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deletarGerenteResponse" message="tns:IService1_deletarGerente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarGerente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/listarGerente" message="tns:IService1_listarGerente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/listarGerenteResponse" message="tns:IService1_listarGerente_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="inserirProduto">
+      <soap:operation soapAction="http://tempuri.org/IService1/inserirProduto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alterarProduto">
+      <soap:operation soapAction="http://tempuri.org/IService1/alterarProduto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarProduto">
+      <soap:operation soapAction="http://tempuri.org/IService1/deletarProduto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarProduto">
+      <soap:operation soapAction="http://tempuri.org/IService1/listarProduto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirMovimentacao">
+      <soap:operation soapAction="http://tempuri.org/IService1/inserirMovimentacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alterarMovimentacao">
+      <soap:operation soapAction="http://tempuri.org/IService1/alterarMovimentacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarMovimentacao">
+      <soap:operation soapAction="http://tempuri.org/IService1/deletarMovimentacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarMovimentacao">
+      <soap:operation soapAction="http://tempuri.org/IService1/listarMovimentacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMax">
+      <soap:operation soapAction="http://tempuri.org/IService1/getMax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirProd_Mov">
+      <soap:operation soapAction="http://tempuri.org/IService1/inserirProd_Mov" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alterarProd_Mov">
+      <soap:operation soapAction="http://tempuri.org/IService1/alterarProd_Mov" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarProd_Mov">
+      <soap:operation soapAction="http://tempuri.org/IService1/deletarProd_Mov" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarProd_Mov">
+      <soap:operation soapAction="http://tempuri.org/IService1/listarProd_Mov" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirGerente">
+      <soap:operation soapAction="http://tempuri.org/IService1/inserirGerente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="alterarGerente">
+      <soap:operation soapAction="http://tempuri.org/IService1/alterarGerente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletarGerente">
+      <soap:operation soapAction="http://tempuri.org/IService1/deletarGerente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarGerente">
+      <soap:operation soapAction="http://tempuri.org/IService1/listarGerente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:54452/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

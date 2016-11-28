@@ -13,9 +13,12 @@ namespace Service
     public class Service1 : IService1
     {
         NGerente        nGeren    = new NGerente();
+        NFuncionario    nfun      = new NFuncionario();
+        NFornecedor     nforn     = new NFornecedor();
         NProduto        nProd     = new NProduto();
         NMovimentacao   nMov      = new NMovimentacao();
         NProd_Mov       nProd_Mov = new NProd_Mov();
+
 
         #region GERENTE
         public void inserirGerente(Gerente bgeren)
@@ -35,6 +38,50 @@ namespace Service
             return nGeren.listarGerente(bgeren);
         }
 
+        #endregion
+
+        #region FUNCIONÁRIO
+        public void inserirFuncionario(Funcionario bfun)
+        {
+            nfun.inserirFuncionario(bfun);
+        }
+
+        public void alterarFuncionario(Funcionario bfun)
+        {
+            nfun.alterarFuncionario(bfun);
+        }
+
+        public void deletarFuncionario(Funcionario bfun)
+        {
+            nfun.deletarFuncionario(bfun);
+        }
+
+        public List<Funcionario> listarFuncionario(Funcionario bfun)
+        {
+            return nfun.listarFuncionario(bfun);
+        }
+        #endregion
+
+        #region FORNECEDOR
+        public void inserirFornecedor(Fornecedor bforn)
+        {
+            nforn.inserirFornecedor(bforn);
+        }
+
+        public void alterarFornecedor(Fornecedor bforn)
+        {
+            nforn.alterarFornecedor(bforn);
+        }
+
+        public void deletarFornecedor(Fornecedor bforn)
+        {
+            nforn.deletarFornecedor(bforn);
+        }
+
+        public List<Fornecedor> listarFornecedor(Fornecedor bforn)
+        {
+            return nforn.listarFornecedor(bforn);
+        }
         #endregion
 
         #region PRODUTO
@@ -95,7 +142,8 @@ namespace Service
         public List<ProdutoMovimentacao> listarProd_Mov(ProdutoMovimentacao prod_mov)
         {
             return nProd_Mov.listarProd_Mov(prod_mov);
-        } 
+        }
         #endregion
+
     }
 }

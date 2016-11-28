@@ -33,6 +33,16 @@ namespace Service
         [OperationContract] void deletarGerente(Gerente bgeren);
         [OperationContract] List<Gerente> listarGerente(Gerente bgeren);
 
+        [OperationContract] void inserirFornecedor(Fornecedor bforn);
+        [OperationContract] void alterarFornecedor(Fornecedor bforn);
+        [OperationContract] void deletarFornecedor(Fornecedor bforn);
+        [OperationContract] List<Fornecedor> listarFornecedor(Fornecedor bforn);
+
+        [OperationContract] void inserirFuncionario(Funcionario bfun);
+        [OperationContract] void alterarFuncionario(Funcionario bfun);
+        [OperationContract] void deletarFuncionario(Funcionario bfun);
+        [OperationContract] List<Funcionario> listarFuncionario(Funcionario bfun);
+
 
     }
 }

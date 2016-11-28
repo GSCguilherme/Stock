@@ -49,3 +49,6 @@ C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\obj\Debug\ProjetoStock.cspro
 C:\Users\CCE\Documents\Unibratec\backup\Stock - 3\ProjetoStock\bin\Debug\ProjetoStock.exe.config
 C:\Users\CCE\Documents\Unibratec\backup\Stock - 3\ProjetoStock\obj\Debug\ProjetoStock.exe
 C:\Users\CCE\Documents\Unibratec\backup\Stock - 3\ProjetoStock\obj\Debug\ProjetoStock.pdb
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\ApplicationInsights.config
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\Service.dll
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\Service.pdb
