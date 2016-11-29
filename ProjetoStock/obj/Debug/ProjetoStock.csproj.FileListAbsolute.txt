@@ -52,3 +52,4 @@ C:\Users\CCE\Documents\Unibratec\backup\Stock - 3\ProjetoStock\obj\Debug\Projeto
 C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\ApplicationInsights.config
 C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\Service.dll
 C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\Service.pdb
+C:\Users\daniel\Source\Repos\Stock\ProjetoStock\obj\Debug\ProjetoStock.view.Splash.resources

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMovimentacao));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -59,7 +60,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Controls.Add(this.panelPrincipal);
             this.panel1.Controls.Add(this.panelCadastro);
             this.panel1.Controls.Add(this.btnEditar);
@@ -72,6 +75,7 @@
             // 
             // panelPrincipal
             // 
+            this.panelPrincipal.BackColor = System.Drawing.Color.Transparent;
             this.panelPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelPrincipal.Controls.Add(this.lblTotal);
             this.panelPrincipal.Controls.Add(this.lblListarSaida);
@@ -136,6 +140,7 @@
             // 
             // panelCadastro
             // 
+            this.panelCadastro.BackColor = System.Drawing.Color.Transparent;
             this.panelCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelCadastro.Controls.Add(this.lblExibirProduto);
             this.panelCadastro.Controls.Add(this.cbTipo);
