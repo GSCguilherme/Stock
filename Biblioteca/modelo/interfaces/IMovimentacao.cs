@@ -10,5 +10,6 @@ namespace Biblioteca.modelo.interfaces
         List<Movimentacao> listarMovimentacao(Movimentacao bmov);
         int getMax();
         decimal Sum(string escolha);
+        decimal sumTotal();
     }
 }

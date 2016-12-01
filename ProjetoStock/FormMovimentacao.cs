@@ -15,6 +15,7 @@ namespace ProjetoStock
         ProdutoMovimentacao bprod_mov = new ProdutoMovimentacao();
         private Produto prod;
         string option;
+        DMovimentacao dprod_mov = new DMovimentacao();
 
         Service1 fa = new Service1();
 
@@ -67,6 +68,27 @@ namespace ProjetoStock
                 lvItem.SubItems.Add(bmovi.Movimentacao.Tipo);
                 lvItem.SubItems.Add(bmovi.Movimentacao.Data_mov);
                 //lvItem.SubItems.Add(Convert.ToString(bmovi.Movimentacao.Qtd_mov));
+                tbMovi.Items.Add(lvItem);
+            }
+        }
+        private void carregarTable()
+        {
+            tbMovi.Items.Clear();
+            tbMovi.Columns.Clear();
+
+            tbMovi.View = View.Details;
+            tbMovi.Columns.Add("Produto", 110);
+            tbMovi.Columns.Add("Movimentação", 80);
+            tbMovi.Columns.Add("Tipo", 80);
+            tbMovi.Columns.Add("Data", 80);
+
+            lPMovi = fa.listarMov(bprod_mov,option);
+            foreach (ProdutoMovimentacao bmovi in lPMovi)
+            {
+                ListViewItem lvItem = new ListViewItem(bmovi.Produto.Nome_prod);
+                lvItem.SubItems.Add(bmovi.Movimentacao.Mov);
+                lvItem.SubItems.Add(bmovi.Movimentacao.Tipo);
+                lvItem.SubItems.Add(bmovi.Movimentacao.Data_mov);
                 tbMovi.Items.Add(lvItem);
             }
         }
@@ -179,6 +201,7 @@ namespace ProjetoStock
         {
             option = "entrada";
             lblTotal.Text = "TOTAL:" + Convert.ToString(fa.Sum(option));
+            carregarTable();
 
         }
 
@@ -186,6 +209,15 @@ namespace ProjetoStock
         {
             option = "saida";
             lblTotal.Text = "TOTAL:" + Convert.ToString(fa.Sum(option));
+            carregarTable();
+        }
+
+        private void lblListar_Click(object sender, EventArgs e)
+        {
+            option = "todos";
+            carregarTabela();
+            lblTotal.Text = "TOTAL:" + Convert.ToString(fa.sumTotal());
+
         }
     }
 }

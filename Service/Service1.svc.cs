@@ -121,6 +121,10 @@ namespace Service
         {
             return nMov.Sum(escolha);
         }
+        public decimal sumTotal()
+        {
+            return nMov.sumTotal();
+        }
         #endregion
 
         #region PRODUTO MOVIMENTAÇÃO
@@ -139,6 +143,10 @@ namespace Service
         public List<ProdutoMovimentacao> listarProd_Mov(ProdutoMovimentacao prod_mov)
         {
             return nProd_Mov.listarProd_Mov(prod_mov);
+        }
+        public List<ProdutoMovimentacao> listarMov(ProdutoMovimentacao prod_mov,string escolha)
+        {
+            return nProd_Mov.listarMov(prod_mov,escolha);
         }
         #endregion
     }

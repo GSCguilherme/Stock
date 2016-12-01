@@ -1,9 +1,6 @@
 ﻿using Biblioteca.modelo.interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Biblioteca.modelo.basicas;
 using Biblioteca.controle.dados;
 
@@ -31,6 +28,10 @@ namespace Biblioteca.controle.negocios
         public List<ProdutoMovimentacao> listarProd_Mov(ProdutoMovimentacao prod_mov)
         {
             return dprod_mov.listarProd_Mov(prod_mov);
+        }
+        public List<ProdutoMovimentacao> listarMov(ProdutoMovimentacao prod_mov,string escolha)
+        {
+            return dprod_mov.listarMov(prod_mov,escolha);
         }
     }
 }

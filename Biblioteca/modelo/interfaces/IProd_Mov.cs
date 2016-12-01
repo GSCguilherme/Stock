@@ -10,5 +10,6 @@ namespace Biblioteca.modelo.interfaces
         void alterarProd_Mov(ProdutoMovimentacao prod_mov);
         void deletarProd_Mov(ProdutoMovimentacao prod_mov);
         List<ProdutoMovimentacao> listarProd_Mov(ProdutoMovimentacao prod_mov);
+        List<ProdutoMovimentacao> listarMov(ProdutoMovimentacao prod_mov, string escolha);
     }
 }

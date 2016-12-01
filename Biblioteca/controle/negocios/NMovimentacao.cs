@@ -41,5 +41,9 @@ namespace Biblioteca.controle.negocios
         {
             return dmov.Sum(escolha);
         }
+        public decimal sumTotal()
+        {
+            return dmov.sumTotal();
+        }
     }
 }

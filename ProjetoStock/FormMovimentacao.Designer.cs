@@ -102,9 +102,10 @@
             // 
             this.lblListarSaida.AutoSize = true;
             this.lblListarSaida.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblListarSaida.Location = new System.Drawing.Point(271, 4);
+            this.lblListarSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListarSaida.Location = new System.Drawing.Point(300, 3);
             this.lblListarSaida.Name = "lblListarSaida";
-            this.lblListarSaida.Size = new System.Drawing.Size(34, 13);
+            this.lblListarSaida.Size = new System.Drawing.Size(50, 18);
             this.lblListarSaida.TabIndex = 3;
             this.lblListarSaida.Text = "Saida";
             this.lblListarSaida.Click += new System.EventHandler(this.lblListarSaida_Click);
@@ -113,9 +114,11 @@
             // 
             this.lblListarEntrada.AutoSize = true;
             this.lblListarEntrada.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblListarEntrada.Location = new System.Drawing.Point(154, 4);
+            this.lblListarEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListarEntrada.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblListarEntrada.Location = new System.Drawing.Point(146, 3);
             this.lblListarEntrada.Name = "lblListarEntrada";
-            this.lblListarEntrada.Size = new System.Drawing.Size(44, 13);
+            this.lblListarEntrada.Size = new System.Drawing.Size(66, 18);
             this.lblListarEntrada.TabIndex = 2;
             this.lblListarEntrada.Text = "Entrada";
             this.lblListarEntrada.Click += new System.EventHandler(this.lblListarEntrada_Click);
@@ -124,11 +127,13 @@
             // 
             this.lblListar.AutoSize = true;
             this.lblListar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblListar.Location = new System.Drawing.Point(30, 4);
+            this.lblListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListar.Location = new System.Drawing.Point(3, 3);
             this.lblListar.Name = "lblListar";
-            this.lblListar.Size = new System.Drawing.Size(37, 13);
+            this.lblListar.Size = new System.Drawing.Size(56, 18);
             this.lblListar.TabIndex = 1;
             this.lblListar.Text = "Todos";
+            this.lblListar.Click += new System.EventHandler(this.lblListar_Click);
             // 
             // tbMovi
             // 

@@ -16,11 +16,13 @@ namespace Service {
         [OperationContract] List<Movimentacao> listarMovimentacao(Movimentacao bmov);
         [OperationContract] int getMax();
         [OperationContract] decimal Sum(string escolha);
+        [OperationContract] decimal sumTotal();
 
         [OperationContract] void inserirProd_Mov(ProdutoMovimentacao prod_mov);
         [OperationContract] void alterarProd_Mov(ProdutoMovimentacao prod_mov);
         [OperationContract] void deletarProd_Mov(ProdutoMovimentacao prod_mov);
         [OperationContract] List<ProdutoMovimentacao> listarProd_Mov(ProdutoMovimentacao prod_mov);
+        [OperationContract] List<ProdutoMovimentacao> listarMov(ProdutoMovimentacao prod_mov,string escolha);
 
         [OperationContract] void inserirGerente(Gerente bgeren);
         [OperationContract] void alterarGerente(Gerente bgeren);
