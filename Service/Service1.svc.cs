@@ -115,7 +115,11 @@ namespace Service
         }
         public int getMax()
         {
-            throw new NotImplementedException();
+            return nMov.getMax();
+        }
+        public decimal Sum(string escolha)
+        {
+            return nMov.Sum(escolha);
         }
         #endregion
 

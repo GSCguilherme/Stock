@@ -124,6 +124,10 @@ namespace Biblioteca
         {
             return nmov.getMax();
         }
+        public decimal Sum(string escolha)
+        {
+            return nmov.Sum(escolha);
+        }
         #endregion
 
         #region PRODUTO MOVIMENTACAO

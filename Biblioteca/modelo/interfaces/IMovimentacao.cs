@@ -9,5 +9,6 @@ namespace Biblioteca.modelo.interfaces
         void deletarMovimentacao(Movimentacao bmov);
         List<Movimentacao> listarMovimentacao(Movimentacao bmov);
         int getMax();
+        decimal Sum(string escolha);
     }
 }

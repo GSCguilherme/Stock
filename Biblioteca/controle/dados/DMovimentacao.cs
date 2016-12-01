@@ -78,5 +78,26 @@ namespace Biblioteca.controle.dados
             }
             return bMov.Cod_mov;
         }
+
+        public decimal Sum(string escolha)
+        {
+            decimal resultado = 0;
+            try
+            {
+                MySqlConnection con = new MySqlConnection("server=localhost; database=stock; uid=root; password='vertrigo'");
+                string sql = "SELECT SUM(movimentacao.qtd_mov) AS 'Quantidade' FROM movimentacao INNER JOIN prod_mov ON prod_mov.cod_mov = movimentacao.cod_mov INNER JOIN produto ON prod_mov.cod_prod = produto.cod_prod WHERE movimentacao.mov = '"+ escolha +"'";
+                con.Open();
+                MySqlCommand mcd = new MySqlCommand(sql, con);
+                resultado = (decimal)mcd.ExecuteScalar();
+                con.Close();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro no Cálculo da Movimentação \n" + ex.Message, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return resultado;
+        }
+
     }
 }

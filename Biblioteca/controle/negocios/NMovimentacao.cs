@@ -36,5 +36,10 @@ namespace Biblioteca.controle.negocios
         {
             return dmov.listarMovimentacao(bmov);
         }
+
+        public decimal Sum(string escolha)
+        {
+            return dmov.Sum(escolha);
+        }
     }
 }

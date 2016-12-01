@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 using Service;
+using Biblioteca.controle.dados;
 
 namespace ProjetoStock
 {
@@ -13,9 +14,11 @@ namespace ProjetoStock
         Movimentacao bmov = new Movimentacao();
         ProdutoMovimentacao bprod_mov = new ProdutoMovimentacao();
         private Produto prod;
+        string option;
 
         Service1 fa = new Service1();
 
+        DMovimentacao dmov = new DMovimentacao();
         List<Produto> lProd = new List<Produto>();
         List<Movimentacao> lMovi = new List<Movimentacao>();
         List<ProdutoMovimentacao> lPMovi = new List<ProdutoMovimentacao>();
@@ -170,6 +173,19 @@ namespace ProjetoStock
                 MessageBox.Show("Movimentação deletada com sucesso !");
                 carregarTabela();
             }
+        }
+
+        private void lblListarEntrada_Click(object sender, EventArgs e)
+        {
+            option = "entrada";
+            lblTotal.Text = "TOTAL:" + Convert.ToString(fa.Sum(option));
+
+        }
+
+        private void lblListarSaida_Click(object sender, EventArgs e)
+        {
+            option = "saida";
+            lblTotal.Text = "TOTAL:" + Convert.ToString(fa.Sum(option));
         }
     }
 }

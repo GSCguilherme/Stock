@@ -91,6 +91,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblTotal.ForeColor = System.Drawing.SystemColors.Control;
             this.lblTotal.Location = new System.Drawing.Point(3, 249);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(41, 13);
@@ -106,6 +107,7 @@
             this.lblListarSaida.Size = new System.Drawing.Size(34, 13);
             this.lblListarSaida.TabIndex = 3;
             this.lblListarSaida.Text = "Saida";
+            this.lblListarSaida.Click += new System.EventHandler(this.lblListarSaida_Click);
             // 
             // lblListarEntrada
             // 
@@ -116,6 +118,7 @@
             this.lblListarEntrada.Size = new System.Drawing.Size(44, 13);
             this.lblListarEntrada.TabIndex = 2;
             this.lblListarEntrada.Text = "Entrada";
+            this.lblListarEntrada.Click += new System.EventHandler(this.lblListarEntrada_Click);
             // 
             // lblListar
             // 

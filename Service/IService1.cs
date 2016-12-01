@@ -15,6 +15,7 @@ namespace Service {
         [OperationContract] void deletarMovimentacao(Movimentacao bmov);
         [OperationContract] List<Movimentacao> listarMovimentacao(Movimentacao bmov);
         [OperationContract] int getMax();
+        [OperationContract] decimal Sum(string escolha);
 
         [OperationContract] void inserirProd_Mov(ProdutoMovimentacao prod_mov);
         [OperationContract] void alterarProd_Mov(ProdutoMovimentacao prod_mov);
