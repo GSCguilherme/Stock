@@ -149,8 +149,11 @@
             // 
             // cbQtd
             // 
+            this.cbQtd.DisplayMember = "(none)";
             this.cbQtd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbQtd.FormattingEnabled = true;
+            this.cbQtd.Items.AddRange(new object[] {
+            "1"});
             this.cbQtd.Location = new System.Drawing.Point(226, 132);
             this.cbQtd.Name = "cbQtd";
             this.cbQtd.Size = new System.Drawing.Size(85, 21);

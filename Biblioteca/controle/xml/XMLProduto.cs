@@ -6,7 +6,7 @@ using System;
 namespace Biblioteca.controle.xml {
     public class XMLProduto {
         XmlDocument xml = new XmlDocument();
-        string way = @"C:\Users\daniel\Source\Repos\Produto.xml";
+        string way = @"C:\Users\CCE\Documents\Unibratec\Stock\Produto.xml";
 
         private void XML() {
             if (File.Exists(way) == false) {

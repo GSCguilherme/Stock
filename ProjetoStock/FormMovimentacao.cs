@@ -27,7 +27,6 @@ namespace ProjetoStock
         public FormMovimentacao()
         {
             InitializeComponent();
-            popularQtd();
             carregarTabela();
         }
 
@@ -36,16 +35,7 @@ namespace ProjetoStock
             InitializeComponent();
             this.prod = produto;
             lblExibirProduto.Text = prod.Nome_prod;
-            popularQtd();
             carregarTabela();
-        }
-
-        private void popularQtd()
-        {
-            for (int i = 1; i < 101; i++)
-            {
-                cbQtdMovi.Items.Add(i);
-            }
         }
 
         private void carregarTabela()
@@ -71,6 +61,7 @@ namespace ProjetoStock
                 tbMovi.Items.Add(lvItem);
             }
         }
+
         private void carregarTable()
         {
             tbMovi.Items.Clear();
@@ -93,29 +84,104 @@ namespace ProjetoStock
             }
         }
 
+        private void LimparCampos()
+        {
+            cbMovimentacao.Items.Clear();
+            cbMovimentacao.Items.Add("Entrada");
+            cbMovimentacao.Items.Add("Saida");
+
+            cbTipo.Items.Clear();
+            cbTipo.Items.Add("Extorno de Entrada");
+            cbTipo.Items.Add("Devolução");
+
+            cbTipo.Text = "";
+            txtEmailMovimentacao.Text = "";
+            txtEnderecoMovimentacao.Text = "";
+            updQtdProd.Text = "2";
+
+            rbtUm.Checked = false;
+            rbtDez.Checked = false;
+            rbtCinquenta.Checked = false;
+            rbtOutro.Checked = false;
+        }
+
+        private bool ValidarCampos()
+        {
+            if (cbMovimentacao.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor selecione a movimentação", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (cbTipo.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor selecione o tipo de movimentação", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (txtEnderecoMovimentacao.Text == string.Empty)
+            {
+                MessageBox.Show("Informe o endereço da movimentação", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (txtEmailMovimentacao.Text == string.Empty)
+            {
+                MessageBox.Show("Informe o email para a movimentação", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            // Se nenhum check box foi selecionado
+            if(PegarQtd() == 0)
+            {
+                MessageBox.Show("Por favor selecione a quantidade de produtos", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private int PegarQtd()
+        {
+            if (rbtUm.Checked) { return 1; }
+
+            else
+
+            if (rbtDez.Checked) { return 10; }
+
+            else
+
+            if (rbtCinquenta.Checked) { return 50; }
+
+            else
+
+            if (rbtOutro.Checked) { return Convert.ToInt16(updQtdProd.Text); }
+
+            else
+
+            return 0;
+        }
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             try
             {
-                bmov.Mov = cbMovimentacao.Text;
-                bmov.Tipo = cbTipo.Text;
-                bmov.Email = txtEmailMovimentacao.Text;
-                bmov.Endereco = txtEnderecoMovimentacao.Text;
-                bmov.Data_mov = dtPickerData.Text;
-                bmov.Qtd_mov = Convert.ToInt16(cbQtdMovi.Text);
-                fa.inserirMovimentacao(bmov);
+                if(ValidarCampos())
+                {
+                    bmov.Mov = cbMovimentacao.Text;
+                    bmov.Tipo = cbTipo.Text;
+                    bmov.Email = txtEmailMovimentacao.Text;
+                    bmov.Endereco = txtEnderecoMovimentacao.Text;
+                    bmov.Data_mov = dtPickerData.Text;
+                    //bmov.Qtd_mov = Convert.ToInt16(cbQtdMovi.Text);
+                    bmov.Qtd_mov = PegarQtd();
+                    fa.inserirMovimentacao(bmov);
 
-                bprod_mov.Produto.Cod_produto = prod.Cod_produto;
-                bprod_mov.Movimentacao.Cod_mov = fa.getMax();
-                fa.inserirProd_Mov(bprod_mov);
+                    bprod_mov.Produto.Cod_produto = prod.Cod_produto;
+                    bprod_mov.Movimentacao.Cod_mov = fa.getMax();
+                    fa.inserirProd_Mov(bprod_mov);
 
-                MessageBox.Show("Movimentação efetuada com sucesso!");
+                    MessageBox.Show("Movimentação efetuada com sucesso!");
+                    LimparCampos();
+                }         
 
-                cbMovimentacao.Text = "";
-                cbTipo.Text = "";
-                txtEmailMovimentacao.Text = "";
-                txtEnderecoMovimentacao.Text = "";
-                cbQtdMovi.Text = "1";
                 carregarTabela();
             }
             catch (Exception ex)
@@ -146,7 +212,7 @@ namespace ProjetoStock
 
         private void cbMovimentacao_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void tbMovi_MouseClick(object sender, MouseEventArgs e)
@@ -158,7 +224,7 @@ namespace ProjetoStock
             txtEmailMovimentacao.Text = bprod_mov.Movimentacao.Email;
             txtEnderecoMovimentacao.Text = bprod_mov.Movimentacao.Endereco;
             dtPickerData.Text = bprod_mov.Movimentacao.Data_mov;
-            cbQtdMovi.Text = Convert.ToString(bprod_mov.Movimentacao.Qtd_mov);
+            updQtdProd.Text = Convert.ToString(bprod_mov.Movimentacao.Qtd_mov);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -171,7 +237,7 @@ namespace ProjetoStock
                 bmov.Email = txtEmailMovimentacao.Text;
                 bmov.Endereco = txtEnderecoMovimentacao.Text;
                 bmov.Data_mov = dtPickerData.Text;
-                bmov.Qtd_mov = Convert.ToInt16(cbQtdMovi.Text);
+                bmov.Qtd_mov = PegarQtd();
                 fa.alterarMovimentacao(bmov);
                 MessageBox.Show("Movimentação alterada com sucesso!");
                 carregarTabela();
@@ -185,14 +251,14 @@ namespace ProjetoStock
         private void btnDeletar_Click(object sender, EventArgs e)
         {
             bprod_mov = lPMovi.ElementAt(tbMovi.FocusedItem.Index);
-            DialogResult dialogResult = MessageBox.Show("tem certeza que deseja deletar a movimentação " + bprod_mov.Produto.Nome_prod + " ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show("Tem certeza que deseja deletar a movimentação " + bprod_mov.Produto.Nome_prod + " ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             int cod = bprod_mov.Movimentacao.Cod_mov;
             bmov.Cod_mov = cod;
             if (dialogResult == DialogResult.Yes)
             {
                 fa.deletarProd_Mov(bprod_mov);
                 fa.deletarMovimentacao(bmov);
-                MessageBox.Show("Movimentação deletada com sucesso !");
+                //MessageBox.Show("Movimentação deletada com sucesso !");
                 carregarTabela();
             }
         }

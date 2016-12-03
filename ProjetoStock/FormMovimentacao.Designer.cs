@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMovimentacao));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelPrincipal = new System.Windows.Forms.Panel();
@@ -42,7 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbMovimentacao = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbQtdMovi = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtEnderecoMovimentacao = new System.Windows.Forms.TextBox();
@@ -52,10 +52,18 @@
             this.txtEmailMovimentacao = new System.Windows.Forms.TextBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnCadastrarMov = new System.Windows.Forms.Button();
+            this.movimentacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rbtCinquenta = new System.Windows.Forms.RadioButton();
+            this.rbtDez = new System.Windows.Forms.RadioButton();
+            this.rbtUm = new System.Windows.Forms.RadioButton();
+            this.updQtdProd = new System.Windows.Forms.NumericUpDown();
+            this.rbtOutro = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panelPrincipal.SuspendLayout();
             this.panelCadastro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.movimentacaoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updQtdProd)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,10 +75,10 @@
             this.panel1.Controls.Add(this.panelCadastro);
             this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Controls.Add(this.btnDeletar);
-            this.panel1.Controls.Add(this.btnCadastrar);
+            this.panel1.Controls.Add(this.btnCadastrarMov);
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(832, 277);
+            this.panel1.Size = new System.Drawing.Size(832, 380);
             this.panel1.TabIndex = 17;
             // 
             // panelPrincipal
@@ -150,12 +158,16 @@
             // 
             this.panelCadastro.BackColor = System.Drawing.Color.Transparent;
             this.panelCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelCadastro.Controls.Add(this.rbtOutro);
+            this.panelCadastro.Controls.Add(this.updQtdProd);
+            this.panelCadastro.Controls.Add(this.rbtUm);
+            this.panelCadastro.Controls.Add(this.rbtDez);
+            this.panelCadastro.Controls.Add(this.rbtCinquenta);
             this.panelCadastro.Controls.Add(this.lblExibirProduto);
             this.panelCadastro.Controls.Add(this.cbTipo);
             this.panelCadastro.Controls.Add(this.label2);
             this.panelCadastro.Controls.Add(this.cbMovimentacao);
             this.panelCadastro.Controls.Add(this.label3);
-            this.panelCadastro.Controls.Add(this.cbQtdMovi);
             this.panelCadastro.Controls.Add(this.label4);
             this.panelCadastro.Controls.Add(this.label7);
             this.panelCadastro.Controls.Add(this.txtEnderecoMovimentacao);
@@ -163,19 +175,20 @@
             this.panelCadastro.Controls.Add(this.label5);
             this.panelCadastro.Controls.Add(this.dtPickerData);
             this.panelCadastro.Controls.Add(this.txtEmailMovimentacao);
+            this.panelCadastro.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelCadastro.Location = new System.Drawing.Point(9, 5);
             this.panelCadastro.Name = "panelCadastro";
-            this.panelCadastro.Size = new System.Drawing.Size(372, 269);
+            this.panelCadastro.Size = new System.Drawing.Size(372, 356);
             this.panelCadastro.TabIndex = 20;
             // 
             // lblExibirProduto
             // 
             this.lblExibirProduto.AutoSize = true;
             this.lblExibirProduto.Enabled = false;
-            this.lblExibirProduto.Font = new System.Drawing.Font("Ubuntu Condensed", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExibirProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExibirProduto.Location = new System.Drawing.Point(90, 11);
             this.lblExibirProduto.Name = "lblExibirProduto";
-            this.lblExibirProduto.Size = new System.Drawing.Size(93, 29);
+            this.lblExibirProduto.Size = new System.Drawing.Size(105, 29);
             this.lblExibirProduto.TabIndex = 20;
             this.lblExibirProduto.Text = "Produto";
             // 
@@ -183,9 +196,9 @@
             // 
             this.cbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Location = new System.Drawing.Point(93, 80);
+            this.cbTipo.Location = new System.Drawing.Point(133, 80);
             this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(187, 21);
+            this.cbTipo.Size = new System.Drawing.Size(187, 28);
             this.cbTipo.TabIndex = 5;
             this.cbTipo.Click += new System.EventHandler(this.cbTipo_Click);
             // 
@@ -194,7 +207,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(7, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Movimentação:";
             // 
@@ -203,89 +216,79 @@
             this.cbMovimentacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMovimentacao.FormattingEnabled = true;
             this.cbMovimentacao.Items.AddRange(new object[] {
-            "",
             "Entrada",
             "Saida"});
-            this.cbMovimentacao.Location = new System.Drawing.Point(93, 49);
+            this.cbMovimentacao.Location = new System.Drawing.Point(133, 46);
             this.cbMovimentacao.Name = "cbMovimentacao";
-            this.cbMovimentacao.Size = new System.Drawing.Size(187, 21);
+            this.cbMovimentacao.Size = new System.Drawing.Size(187, 28);
             this.cbMovimentacao.TabIndex = 3;
             this.cbMovimentacao.Click += new System.EventHandler(this.cbMovimentacao_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 86);
+            this.label3.Location = new System.Drawing.Point(50, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.Size = new System.Drawing.Size(41, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tipo:";
-            // 
-            // cbQtdMovi
-            // 
-            this.cbQtdMovi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbQtdMovi.FormattingEnabled = true;
-            this.cbQtdMovi.Location = new System.Drawing.Point(91, 187);
-            this.cbQtdMovi.Name = "cbQtdMovi";
-            this.cbQtdMovi.Size = new System.Drawing.Size(54, 21);
-            this.cbQtdMovi.TabIndex = 13;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 110);
+            this.label4.Location = new System.Drawing.Point(25, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Endereço:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 190);
+            this.label7.Location = new System.Drawing.Point(26, 245);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 13);
+            this.label7.Size = new System.Drawing.Size(84, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "Quantidade:";
             // 
             // txtEnderecoMovimentacao
             // 
-            this.txtEnderecoMovimentacao.Location = new System.Drawing.Point(92, 105);
+            this.txtEnderecoMovimentacao.Location = new System.Drawing.Point(132, 122);
             this.txtEnderecoMovimentacao.Name = "txtEnderecoMovimentacao";
-            this.txtEnderecoMovimentacao.Size = new System.Drawing.Size(188, 20);
+            this.txtEnderecoMovimentacao.Size = new System.Drawing.Size(188, 26);
             this.txtEnderecoMovimentacao.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(51, 165);
+            this.label6.Location = new System.Drawing.Point(49, 210);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 13);
+            this.label6.Size = new System.Drawing.Size(40, 20);
             this.label6.TabIndex = 11;
             this.label6.Text = "Data:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 138);
+            this.label5.Location = new System.Drawing.Point(45, 169);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(49, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "Email:";
             // 
             // dtPickerData
             // 
             this.dtPickerData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtPickerData.Location = new System.Drawing.Point(92, 159);
+            this.dtPickerData.Location = new System.Drawing.Point(131, 205);
             this.dtPickerData.Name = "dtPickerData";
-            this.dtPickerData.Size = new System.Drawing.Size(188, 20);
+            this.dtPickerData.Size = new System.Drawing.Size(188, 26);
             this.dtPickerData.TabIndex = 10;
             // 
             // txtEmailMovimentacao
             // 
-            this.txtEmailMovimentacao.Location = new System.Drawing.Point(92, 133);
+            this.txtEmailMovimentacao.Location = new System.Drawing.Point(131, 163);
             this.txtEmailMovimentacao.Name = "txtEmailMovimentacao";
-            this.txtEmailMovimentacao.Size = new System.Drawing.Size(188, 20);
+            this.txtEmailMovimentacao.Size = new System.Drawing.Size(188, 26);
             this.txtEmailMovimentacao.TabIndex = 9;
             // 
             // btnEditar
@@ -308,21 +311,92 @@
             this.btnDeletar.UseVisualStyleBackColor = true;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
-            // btnCadastrar
+            // btnCadastrarMov
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(387, 62);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(74, 22);
-            this.btnCadastrar.TabIndex = 14;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnCadastrarMov.Location = new System.Drawing.Point(387, 62);
+            this.btnCadastrarMov.Name = "btnCadastrarMov";
+            this.btnCadastrarMov.Size = new System.Drawing.Size(74, 22);
+            this.btnCadastrarMov.TabIndex = 14;
+            this.btnCadastrarMov.Text = "Cadastrar";
+            this.btnCadastrarMov.UseVisualStyleBackColor = true;
+            this.btnCadastrarMov.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // movimentacaoBindingSource
+            // 
+            this.movimentacaoBindingSource.DataSource = typeof(Biblioteca.modelo.basicas.Movimentacao);
+            // 
+            // rbtCinquenta
+            // 
+            this.rbtCinquenta.AutoSize = true;
+            this.rbtCinquenta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtCinquenta.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rbtCinquenta.Location = new System.Drawing.Point(116, 303);
+            this.rbtCinquenta.Name = "rbtCinquenta";
+            this.rbtCinquenta.Size = new System.Drawing.Size(106, 23);
+            this.rbtCinquenta.TabIndex = 21;
+            this.rbtCinquenta.Text = "Cinquenta";
+            this.rbtCinquenta.UseVisualStyleBackColor = true;
+            // 
+            // rbtDez
+            // 
+            this.rbtDez.AutoSize = true;
+            this.rbtDez.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtDez.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rbtDez.Location = new System.Drawing.Point(116, 274);
+            this.rbtDez.Name = "rbtDez";
+            this.rbtDez.Size = new System.Drawing.Size(57, 23);
+            this.rbtDez.TabIndex = 22;
+            this.rbtDez.Text = "Dez";
+            this.rbtDez.UseVisualStyleBackColor = true;
+            // 
+            // rbtUm
+            // 
+            this.rbtUm.AutoSize = true;
+            this.rbtUm.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtUm.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rbtUm.Location = new System.Drawing.Point(116, 245);
+            this.rbtUm.Name = "rbtUm";
+            this.rbtUm.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.rbtUm.Size = new System.Drawing.Size(53, 23);
+            this.rbtUm.TabIndex = 23;
+            this.rbtUm.Text = "Um";
+            this.rbtUm.UseVisualStyleBackColor = true;
+            // 
+            // updQtdProd
+            // 
+            this.updQtdProd.Location = new System.Drawing.Point(228, 274);
+            this.updQtdProd.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.updQtdProd.Name = "updQtdProd";
+            this.updQtdProd.ReadOnly = true;
+            this.updQtdProd.Size = new System.Drawing.Size(77, 26);
+            this.updQtdProd.TabIndex = 24;
+            this.updQtdProd.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // rbtOutro
+            // 
+            this.rbtOutro.AutoSize = true;
+            this.rbtOutro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtOutro.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rbtOutro.Location = new System.Drawing.Point(228, 244);
+            this.rbtOutro.Name = "rbtOutro";
+            this.rbtOutro.Size = new System.Drawing.Size(70, 23);
+            this.rbtOutro.TabIndex = 25;
+            this.rbtOutro.Text = "Outro";
+            this.rbtOutro.UseVisualStyleBackColor = true;
             // 
             // FormMovimentacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 280);
+            this.ClientSize = new System.Drawing.Size(836, 375);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "FormMovimentacao";
@@ -333,6 +407,8 @@
             this.panelPrincipal.PerformLayout();
             this.panelCadastro.ResumeLayout(false);
             this.panelCadastro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.movimentacaoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updQtdProd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -350,10 +426,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtPickerData;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbQtdMovi;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnDeletar;
-        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnCadastrarMov;
         private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.Panel panelCadastro;
         private System.Windows.Forms.ListView tbMovi;
@@ -362,6 +437,12 @@
         private System.Windows.Forms.Label lblListarEntrada;
         private System.Windows.Forms.Label lblListar;
         private System.Windows.Forms.Label lblExibirProduto;
+        private System.Windows.Forms.BindingSource movimentacaoBindingSource;
+        private System.Windows.Forms.NumericUpDown updQtdProd;
+        private System.Windows.Forms.RadioButton rbtUm;
+        private System.Windows.Forms.RadioButton rbtDez;
+        private System.Windows.Forms.RadioButton rbtCinquenta;
+        private System.Windows.Forms.RadioButton rbtOutro;
     }
 }
 

@@ -53,3 +53,7 @@ C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\ApplicationInsights.co
 C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\Service.dll
 C:\Users\daniel\Source\Repos\Stock\ProjetoStock\bin\Debug\Service.pdb
 C:\Users\daniel\Source\Repos\Stock\ProjetoStock\obj\Debug\ProjetoStock.view.Splash.resources
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\bin\Debug\ApplicationInsights.config
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\bin\Debug\Service.dll
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\bin\Debug\Service.pdb
+C:\Users\CCE\Documents\Unibratec\Stock\ProjetoStock\obj\Debug\ProjetoStock.view.Splash.resources
