@@ -38,6 +38,11 @@
             this.lblListar = new System.Windows.Forms.Label();
             this.tbMovi = new System.Windows.Forms.ListView();
             this.panelCadastro = new System.Windows.Forms.Panel();
+            this.rbtOutro = new System.Windows.Forms.RadioButton();
+            this.updQtdProd = new System.Windows.Forms.NumericUpDown();
+            this.rbtUm = new System.Windows.Forms.RadioButton();
+            this.rbtDez = new System.Windows.Forms.RadioButton();
+            this.rbtCinquenta = new System.Windows.Forms.RadioButton();
             this.lblExibirProduto = new System.Windows.Forms.Label();
             this.cbTipo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,16 +59,11 @@
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnCadastrarMov = new System.Windows.Forms.Button();
             this.movimentacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rbtCinquenta = new System.Windows.Forms.RadioButton();
-            this.rbtDez = new System.Windows.Forms.RadioButton();
-            this.rbtUm = new System.Windows.Forms.RadioButton();
-            this.updQtdProd = new System.Windows.Forms.NumericUpDown();
-            this.rbtOutro = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panelPrincipal.SuspendLayout();
             this.panelCadastro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.movimentacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updQtdProd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movimentacaoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,7 +78,7 @@
             this.panel1.Controls.Add(this.btnCadastrarMov);
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(832, 380);
+            this.panel1.Size = new System.Drawing.Size(836, 361);
             this.panel1.TabIndex = 17;
             // 
             // panelPrincipal
@@ -178,8 +178,75 @@
             this.panelCadastro.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelCadastro.Location = new System.Drawing.Point(9, 5);
             this.panelCadastro.Name = "panelCadastro";
-            this.panelCadastro.Size = new System.Drawing.Size(372, 356);
+            this.panelCadastro.Size = new System.Drawing.Size(372, 343);
             this.panelCadastro.TabIndex = 20;
+            // 
+            // rbtOutro
+            // 
+            this.rbtOutro.AutoSize = true;
+            this.rbtOutro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtOutro.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rbtOutro.Location = new System.Drawing.Point(228, 244);
+            this.rbtOutro.Name = "rbtOutro";
+            this.rbtOutro.Size = new System.Drawing.Size(70, 23);
+            this.rbtOutro.TabIndex = 25;
+            this.rbtOutro.Text = "Outro";
+            this.rbtOutro.UseVisualStyleBackColor = true;
+            // 
+            // updQtdProd
+            // 
+            this.updQtdProd.Location = new System.Drawing.Point(228, 274);
+            this.updQtdProd.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.updQtdProd.Name = "updQtdProd";
+            this.updQtdProd.ReadOnly = true;
+            this.updQtdProd.Size = new System.Drawing.Size(77, 26);
+            this.updQtdProd.TabIndex = 24;
+            this.updQtdProd.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // rbtUm
+            // 
+            this.rbtUm.AutoSize = true;
+            this.rbtUm.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtUm.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rbtUm.Location = new System.Drawing.Point(116, 245);
+            this.rbtUm.Name = "rbtUm";
+            this.rbtUm.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.rbtUm.Size = new System.Drawing.Size(53, 23);
+            this.rbtUm.TabIndex = 23;
+            this.rbtUm.Text = "Um";
+            this.rbtUm.UseVisualStyleBackColor = true;
+            // 
+            // rbtDez
+            // 
+            this.rbtDez.AutoSize = true;
+            this.rbtDez.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtDez.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rbtDez.Location = new System.Drawing.Point(116, 274);
+            this.rbtDez.Name = "rbtDez";
+            this.rbtDez.Size = new System.Drawing.Size(57, 23);
+            this.rbtDez.TabIndex = 22;
+            this.rbtDez.Text = "Dez";
+            this.rbtDez.UseVisualStyleBackColor = true;
+            // 
+            // rbtCinquenta
+            // 
+            this.rbtCinquenta.AutoSize = true;
+            this.rbtCinquenta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtCinquenta.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rbtCinquenta.Location = new System.Drawing.Point(116, 303);
+            this.rbtCinquenta.Name = "rbtCinquenta";
+            this.rbtCinquenta.Size = new System.Drawing.Size(106, 23);
+            this.rbtCinquenta.TabIndex = 21;
+            this.rbtCinquenta.Text = "Cinquenta";
+            this.rbtCinquenta.UseVisualStyleBackColor = true;
             // 
             // lblExibirProduto
             // 
@@ -325,78 +392,11 @@
             // 
             this.movimentacaoBindingSource.DataSource = typeof(Biblioteca.modelo.basicas.Movimentacao);
             // 
-            // rbtCinquenta
-            // 
-            this.rbtCinquenta.AutoSize = true;
-            this.rbtCinquenta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtCinquenta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rbtCinquenta.Location = new System.Drawing.Point(116, 303);
-            this.rbtCinquenta.Name = "rbtCinquenta";
-            this.rbtCinquenta.Size = new System.Drawing.Size(106, 23);
-            this.rbtCinquenta.TabIndex = 21;
-            this.rbtCinquenta.Text = "Cinquenta";
-            this.rbtCinquenta.UseVisualStyleBackColor = true;
-            // 
-            // rbtDez
-            // 
-            this.rbtDez.AutoSize = true;
-            this.rbtDez.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtDez.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rbtDez.Location = new System.Drawing.Point(116, 274);
-            this.rbtDez.Name = "rbtDez";
-            this.rbtDez.Size = new System.Drawing.Size(57, 23);
-            this.rbtDez.TabIndex = 22;
-            this.rbtDez.Text = "Dez";
-            this.rbtDez.UseVisualStyleBackColor = true;
-            // 
-            // rbtUm
-            // 
-            this.rbtUm.AutoSize = true;
-            this.rbtUm.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtUm.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rbtUm.Location = new System.Drawing.Point(116, 245);
-            this.rbtUm.Name = "rbtUm";
-            this.rbtUm.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.rbtUm.Size = new System.Drawing.Size(53, 23);
-            this.rbtUm.TabIndex = 23;
-            this.rbtUm.Text = "Um";
-            this.rbtUm.UseVisualStyleBackColor = true;
-            // 
-            // updQtdProd
-            // 
-            this.updQtdProd.Location = new System.Drawing.Point(228, 274);
-            this.updQtdProd.Minimum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.updQtdProd.Name = "updQtdProd";
-            this.updQtdProd.ReadOnly = true;
-            this.updQtdProd.Size = new System.Drawing.Size(77, 26);
-            this.updQtdProd.TabIndex = 24;
-            this.updQtdProd.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            // 
-            // rbtOutro
-            // 
-            this.rbtOutro.AutoSize = true;
-            this.rbtOutro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtOutro.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.rbtOutro.Location = new System.Drawing.Point(228, 244);
-            this.rbtOutro.Name = "rbtOutro";
-            this.rbtOutro.Size = new System.Drawing.Size(70, 23);
-            this.rbtOutro.TabIndex = 25;
-            this.rbtOutro.Text = "Outro";
-            this.rbtOutro.UseVisualStyleBackColor = true;
-            // 
             // FormMovimentacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 375);
+            this.ClientSize = new System.Drawing.Size(836, 360);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "FormMovimentacao";
@@ -407,8 +407,8 @@
             this.panelPrincipal.PerformLayout();
             this.panelCadastro.ResumeLayout(false);
             this.panelCadastro.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.movimentacaoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updQtdProd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movimentacaoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

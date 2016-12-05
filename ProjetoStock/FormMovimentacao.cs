@@ -231,15 +231,19 @@ namespace ProjetoStock
         {
             try
             {
-                bmov.Cod_mov = bprod_mov.Movimentacao.Cod_mov;
-                bmov.Mov = cbMovimentacao.Text;
-                bmov.Tipo = cbTipo.Text;
-                bmov.Email = txtEmailMovimentacao.Text;
-                bmov.Endereco = txtEnderecoMovimentacao.Text;
-                bmov.Data_mov = dtPickerData.Text;
-                bmov.Qtd_mov = PegarQtd();
-                fa.alterarMovimentacao(bmov);
-                MessageBox.Show("Movimentação alterada com sucesso!");
+                if (ValidarCampos())
+                {
+                    bmov.Cod_mov = bprod_mov.Movimentacao.Cod_mov;
+                    bmov.Mov = cbMovimentacao.Text;
+                    bmov.Tipo = cbTipo.Text;
+                    bmov.Email = txtEmailMovimentacao.Text;
+                    bmov.Endereco = txtEnderecoMovimentacao.Text;
+                    bmov.Data_mov = dtPickerData.Text;
+                    bmov.Qtd_mov = PegarQtd();
+                    fa.alterarMovimentacao(bmov);
+                    MessageBox.Show("Movimentação alterada com sucesso!");
+                    LimparCampos();
+                }
                 carregarTabela();
             }
             catch (Exception ex)
@@ -260,6 +264,7 @@ namespace ProjetoStock
                 fa.deletarMovimentacao(bmov);
                 //MessageBox.Show("Movimentação deletada com sucesso !");
                 carregarTabela();
+                LimparCampos();
             }
         }
 
